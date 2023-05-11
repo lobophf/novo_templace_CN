@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Ciência e Natura LaTeX Template
+% Version 1.0 (19/01/2017)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%----------------------------------------------------------------------------------------
+%	DOCUMENT CONFIGURATIONS (not for authors)
+%----------------------------------------------------------------------------------------
+\documentclass[oneside, a4paper, 12pt]{article}
+\usepackage{xcolor}
+
+\usepackage{etoolbox}
+
+\usepackage{ragged2e}
+
+\usepackage{soul}
+
+\usepackage{titling}
+\usepackage{fontawesome5}
+\usepackage{xifthen}
+\usepackage[hidelinks]{hyperref}
+%
+%----------------------------------------------------------------------------------------
+%	TEMPLATE CONFIGURATIONS (not for authors)
+%----------------------------------------------------------------------------------------
+%
+\definecolor{cncolor}{RGB}{0,102,153}
+\setul{3pt}{2.5pt}
+\setulcolor{cncolor}
+
+\newcommand{\cenSection}[1]{\def\cenSection{\flushleft{\small#1}}}
+
+\newcommand{\englishTitle}[1]{\def\englishTitle{\centering{\large\bf#1}}}
+\newcommand{\portugueseTitle}[1]{\def\portugueseTitle{\par{\centering\bf#1}}}
+
+\newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\faOrcid}}}
+
+\newcommand{\authorinfo}[3][]{%
+  {\centering\bf
+  {\large #2}% author's name
+  \ifthenelse{\isempty{#1}}{}% do nothing if ORCID is not provided
+    {\hspace{0.1em}\textsuperscript{\footnotesize #3}\hspace{0.1em}{\large\orcid{#1}\hspace{-0.6em}}}
+  }
+}
+
+\newcommand{\affil}[1]{\def\affil{#1}}
+\newcommand{\affiliation}[2]{\textsuperscript{\footnotesize #1}#2\par}
+
+\newcommand{\portugueseAbstract}[1]{\def\portugueseAbstract{
+  \flushleft
+  {\bf RESUMO}\\[-8pt]
+  {\color{cncolor}\rule{50mm}{1.5pt}}
+  \par\nobreak\noindent\ignorespaces\justifying#1
+}}
+%
+\newcommand{\englishAbstract}[1]{\def\englishAbstract{
+  \flushleft
+  {\bf ABSTRACT}\\[-8pt]
+  {\color{cncolor}\rule{50mm}{1.5pt}}
+  \par\nobreak\noindent\ignorespaces\justifying#1
+}}
+%
+\newcommand{\englishKeywords}[1]{\def\englishKeywords{
+\par\smallskip\noindent
+  \small{\bf keywords:}~#1
+}}
+%
+\newcommand{\portugueseKeywords}[1]{\def\portugueseKeywords{
+\par\smallskip\noindent
+  \small{\bf palavras-chave:}~#1
+}}
+%
+%----------------------------------------------------------------------------------------
+%	YOUR PACKAGES
+%----------------------------------------------------------------------------------------
+%
+%----------------------------------------------------------------------------------------
+%	YOUR NEW COMMANDS
+%----------------------------------------------------------------------------------------
+%
+%----------------------------------------------------------------------------------------
+%	PAPER INFO (for authors)
+%----------------------------------------------------------------------------------------
+%
+\cenSection{Chemistry}
+%
+\englishTitle{The title in English}
+%
+\portugueseTitle{O título em Português}
+%
+\author{
+  \authorinfo[0000-0002-1825-0097]{Josiah Carberry}{I}, 
+  \authorinfo[0000-0002-1825-0097]{Maryln Tall}{II},
+  \authorinfo{Dwain Gooslin}{I}
+}
+%
+\affil{ 
+  \affiliation{I}{Brown University, USA}
+  \affiliation{II}{University of Oxford, UK}
+}
+%
+\portugueseAbstract{
+  Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo.Não sou faixa preta cumpadi, 
+  sou preto inteiris, inteiris.Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Quem num gosta di mé, 
+  boa gentis num é. Leite de capivaris, leite de mula manquis sem cabeça.Mé faiz elementum girarzis, nisi eros vermeio.
+  Detraxit consequat et quo num tendi nada.Casamentiss faiz malandris se pirulitá.
+}
+%
+\portugueseKeywords{aaa, bbb, ccc, ddd}
+%
+\englishAbstract{
+  Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo.Não sou faixa preta cumpadi, 
+  sou preto inteiris, inteiris.Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Quem num gosta di mé, 
+  boa gentis num é. Leite de capivaris, leite de mula manquis sem cabeça.Mé faiz elementum girarzis, nisi eros vermeio.
+  Detraxit consequat et quo num tendi nada.Casamentiss faiz malandris se pirulitá.
+}
+%
+\englishKeywords{aaa, bbb, ccc, ddd}
+%
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+\cenSection
+
+\englishTitle
+\portugueseTitle
+
+\theauthor
+\affil
+
+\portugueseAbstract
+\portugueseKeywords
+
+\englishAbstract
+\englishKeywords
+
+\end{document}
