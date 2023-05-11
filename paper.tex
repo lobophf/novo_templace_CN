@@ -10,6 +10,7 @@
 %----------------------------------------------------------------------------------------
 \documentclass[oneside, a4paper, 12pt]{article}
 \usepackage{xcolor}
+\usepackage{tikz}
 
 \usepackage{etoolbox}
 
@@ -26,14 +27,42 @@
 %	TEMPLATE CONFIGURATIONS (not for authors)
 %----------------------------------------------------------------------------------------
 %
+\newcommand{\issn}[1]{\def\issn{#1}}
+\newcommand{\volume}[1]{\def\volume{#1}}
+\newcommand{\doi}[1]{\def\doi{#1}}
+\newcommand{\issue}[1]{\def\issue{#1}}
+\newcommand{\submitionDate}[1]{\def\submitionDate{#1}}
+\newcommand{\approvalDate}[1]{\def\approvalDate{#1}}
+\newcommand{\publishDate}[1]{\def\publishDate{#1}}
+
+\newcommand{\cncoverheader}{
+  \noindent\begin{tikzpicture}[remember picture, overlay]
+    \begin{scope}[shift={(0,-20mm)}]
+      \node[anchor=south west,inner sep=0mm] at (0, 0) {\includegraphics[height=20mm]{example-image-a}};
+      \node[anchor=south,inner sep=0mm] at (\textwidth/2, 5mm) {\includegraphics[height=10mm]{example-image-b}};
+      \node[anchor=south east, inner sep=0mm] at (\textwidth, 9mm) {\includegraphics[height=12mm]{example-image-c}};
+      \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 6mm) {\footnotesize ISSN \issn};
+      \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 1.5mm) {\bf\footnotesize OPEN~\includegraphics[width=6px]{images/open-access.eps}~ACCESS};
+
+      \draw[line width=1pt, cncolor] (-20mm, -1.5mm) -- (\paperwidth, -1.5mm);
+      \draw node[anchor=north, inner sep=2mm] at (\textwidth / 2, 0) {\footnotesize Ci. e Nat., Santa Maria, v. \volume, \issue, 2022~ • ~\doi};
+      \node[anchor=north, inner sep=2mm, yshift=-4mm] at (\textwidth / 2, 0) {\footnotesize Submissão: \submitionDate~ • ~Aprovação: \approvalDate~ • ~Publicação: \publishDate};
+
+      \draw[line width=1pt, cncolor] (-20mm, -10mm) -- (\paperwidth, -10mm);
+    \end{scope}
+  \end{tikzpicture}
+ \par\vspace{24mm}
+}
+
 \definecolor{cncolor}{RGB}{0,102,153}
 \setul{3pt}{2.5pt}
 \setulcolor{cncolor}
 
+
 \newcommand{\cenSection}[1]{\def\cenSection{\flushleft{\small#1}}}
 
-\newcommand{\englishTitle}[1]{\def\englishTitle{\centering{\large\bf#1}}}
-\newcommand{\portugueseTitle}[1]{\def\portugueseTitle{\par{\centering\bf#1}}}
+\newcommand{\englishTitle}[1]{\def\englishTitle{\centering{\Large\bf#1\\}}}
+\newcommand{\portugueseTitle}[1]{\def\portugueseTitle{\centering{\large#1}}}
 
 \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\faOrcid}}}
 
@@ -81,6 +110,24 @@
 %----------------------------------------------------------------------------------------
 %
 %----------------------------------------------------------------------------------------
+%	PUBLISH INFO (not for authors)
+%----------------------------------------------------------------------------------------
+%
+\issn{2179-460X}
+%
+\volume{44}
+%
+\issue{eXX}
+%
+\doi{https://doi.org/10.5902/2179460Xxxxxx}
+%
+\submitionDate{xx/xx/xx}
+%
+\approvalDate{xx/xx/xx}
+%
+\publishDate{xx/xx/xx}
+%
+%----------------------------------------------------------------------------------------
 %	PAPER INFO (for authors)
 %----------------------------------------------------------------------------------------
 %
@@ -121,6 +168,7 @@
 %
 %----------------------------------------------------------------------------------------
 \begin{document}
+\cncoverheader
 
 \cenSection
 
