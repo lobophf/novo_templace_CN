@@ -9,6 +9,9 @@
 %	DOCUMENT CONFIGURATIONS (not for authors)
 %----------------------------------------------------------------------------------------
 \documentclass[oneside, a4paper, 12pt]{article}
+
+\usepackage[left=20mm,right=20mm,top=12.5mm,bottom=12mm]{geometry}
+
 \usepackage{xcolor}
 \usepackage{tikz}
 
@@ -45,10 +48,21 @@
       \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 1.5mm) {\bf\footnotesize OPEN~\includegraphics[width=6px]{images/open-access.eps}~ACCESS};
 
       \draw[line width=1pt, cncolor] (-20mm, -1.5mm) -- (\paperwidth, -1.5mm);
-      \draw node[anchor=north, inner sep=2mm] at (\textwidth / 2, 0) {\footnotesize Ci. e Nat., Santa Maria, v. \volume, \issue, 2022~ • ~\doi};
-      \node[anchor=north, inner sep=2mm, yshift=-4mm] at (\textwidth / 2, 0) {\footnotesize Submissão: \submitionDate~ • ~Aprovação: \approvalDate~ • ~Publicação: \publishDate};
+      \draw node[anchor=north, inner sep=2mm] at (\textwidth / 2, 0) {\footnotesize Ci. e Nat., Santa Maria, v. \volume, \issue, 2022~ \textbullet ~~\doi};
+      \node[anchor=north, inner sep=2mm, yshift=-4mm] at (\textwidth / 2, 0) {\footnotesize Submissão: \submitionDate~ \textbullet ~~Aprovação: \approvalDate~ \textbullet ~~Publicação: \publishDate};
 
       \draw[line width=1pt, cncolor] (-20mm, -10mm) -- (\paperwidth, -10mm);
+    \end{scope}
+  \end{tikzpicture}
+ \par\vspace{24mm}
+}
+
+\newcommand{\cncoverfooter}{
+  \noindent\begin{tikzpicture}[remember picture, overlay]
+    \begin{scope}[shift={(0,0)}]
+      \draw[line width=1pt, cncolor] (0, 0) -- (\textwidth, 0);
+      \node[anchor=north west,inner sep=0mm] at (0, -1.5mm) {\includegraphics[height=8mm]{example-image-a}};
+      \node[anchor=west, inner sep=0mm] at (15mm, -5.6mm) {\footnotesize Published by Ciência e Natura under a CC BY-NC-SA 4.0 license.};
     \end{scope}
   \end{tikzpicture}
  \par\vspace{24mm}
@@ -57,7 +71,6 @@
 \definecolor{cncolor}{RGB}{0,102,153}
 \setul{3pt}{2.5pt}
 \setulcolor{cncolor}
-
 
 \newcommand{\cenSection}[1]{\def\cenSection{\flushleft{\small#1}}}
 
@@ -74,7 +87,7 @@
   }
 }
 
-\newcommand{\affil}[1]{\def\affil{#1}}
+\newcommand{\affil}[1]{\def\affil{\par#1}}
 \newcommand{\affiliation}[2]{\textsuperscript{\footnotesize #1}#2\par}
 
 \newcommand{\portugueseAbstract}[1]{\def\portugueseAbstract{
@@ -168,6 +181,7 @@
 %
 %----------------------------------------------------------------------------------------
 \begin{document}
+\thispagestyle{empty}
 \cncoverheader
 
 \cenSection
@@ -183,5 +197,7 @@
 
 \englishAbstract
 \englishKeywords
+\vfill
+\cncoverfooter
 
 \end{document}
