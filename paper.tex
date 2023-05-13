@@ -25,8 +25,6 @@
 
 \usepackage{etoolbox}
 
-\usepackage{ragged2e}
-
 \usepackage{soul}
 
 \usepackage{titling}
@@ -42,6 +40,10 @@
 %	TEMPLATE CONFIGURATIONS (not for authors)
 %----------------------------------------------------------------------------------------
 %
+\makeatletter
+\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{3mm}}
+\makeatother
+
 \pagestyle{fancy} % All pages have headers and footers
 \setlength{\headheight}{10mm}
 \setlength{\headsep}{5mm} 
@@ -147,13 +149,10 @@
 \newcommand{\shortHeaderTitle}[1]{\def\shortHeaderTitle{#1}}
 \newcommand{\shortHeaderAuthors}[1]{\def\shortHeaderAuthors{#1}}
 
-\makeatletter
-\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{3mm}}
-\makeatother
+\setlength{\parskip}{12pt}
+\setlength{\parindent}{36pt} 
 
-\setlength{\parskip}{12pt} % 1ex plus 0.5ex minus 0.2ex}
-\setlength{\parindent}{20mm} 
-\setlength{\tabcolsep}{30mm}
+\usepackage{ragged2e}
 
 \newcommand{\coverpage}{
   \thispagestyle{empty}
