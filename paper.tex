@@ -8,9 +8,17 @@
 %----------------------------------------------------------------------------------------
 %	DOCUMENT CONFIGURATIONS (not for authors)
 %----------------------------------------------------------------------------------------
-\documentclass[oneside, a4paper, 12pt]{article}
+\documentclass[twoside, a4paper, 12pt]{article}
 
-\usepackage[left=20mm,right=20mm,top=12.5mm,bottom=12mm]{geometry}
+\usepackage[left=20mm,
+            right=20mm,
+            top=12.5mm,
+            bottom=15mm,
+%            headheight=10mm,
+%            footskip=0mm,
+            includehead,
+            includefoot,
+            ]{geometry}
 
 \usepackage{xcolor}
 \usepackage{tikz}
@@ -25,22 +33,44 @@
 \usepackage{fontawesome5}
 \usepackage{xifthen}
 \usepackage[hidelinks]{hyperref}
+
+\usepackage{fancyhdr} % Headers and footers
+
+\usepackage{indentfirst}
 %
 %----------------------------------------------------------------------------------------
 %	TEMPLATE CONFIGURATIONS (not for authors)
 %----------------------------------------------------------------------------------------
 %
+\pagestyle{fancy} % All pages have headers and footers
+\setlength{\headheight}{10mm}
+\setlength{\headsep}{5mm} 
+\setlength{\footskip}{4mm}
+\addtolength{\topmargin}{0mm}
+
+\pagestyle{fancy} % All pages have headers and footers
+\fancyfoot{} % Blank out the default footer
+%header
+\fancyhead[EL]{\thepage~~\textbar{}~\shortHeaderTitle} % 
+\fancyhead[OR]{\shortHeaderAuthors~\textbar{}~~\thepage} % 
+\fancyhead[ER]{} % 
+\fancyhead[OL]{} % 
+%
+\renewcommand\headrule{\vspace{-1mm}\noindent\makebox[\linewidth]{\color{cncolor}\rule{\linewidth}{1.5pt}}}
+%footer
+\fancyfoot[C]{{\color{cncolor}\rule{90mm}{1.5pt}}\\[-3pt]{\footnotesize Ci. e Nat., Santa Maria, v.\volume, \eJournal, {\the\year}}}
+
 \newcommand{\issn}[1]{\def\issn{#1}}
 \newcommand{\volume}[1]{\def\volume{#1}}
 \newcommand{\doi}[1]{\def\doi{#1}}
-\newcommand{\issue}[1]{\def\issue{#1}}
+\newcommand{\eJournal}[1]{\def\eJournal{#1}}
 \newcommand{\submitionDate}[1]{\def\submitionDate{#1}}
 \newcommand{\approvalDate}[1]{\def\approvalDate{#1}}
 \newcommand{\publishDate}[1]{\def\publishDate{#1}}
 
 \newcommand{\cncoverheader}{
   \noindent\begin{tikzpicture}[remember picture, overlay]
-    \begin{scope}[shift={(0,-20mm)}]
+    \begin{scope}[shift={(0,-10mm)}]
       \node[anchor=south west,inner sep=0mm] at (0, 0) {\includegraphics[height=25mm]{images/logo-ufsm.png}};
       \node[anchor=south,inner sep=0mm] at (\textwidth/2, 7mm) {\includegraphics[height=16mm]{images/logo-ciencia-e-natura.jpg}};
       \node[anchor=south east, inner sep=0mm] at (\textwidth, 9mm) {\includegraphics[height=17mm]{images/revista.jpg}};
@@ -48,15 +78,15 @@
       \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 1.5mm) {\bf\footnotesize OPEN~\includegraphics[width=6px]{images/open-access.eps}~ACCESS};
 
       \draw[line width=1pt, cncolor] (-20mm, -1.5mm) -- (\paperwidth, -1.5mm);
-      \draw node[anchor=north, inner sep=2mm] at (\textwidth / 2, 0) {\footnotesize Ci. e Nat., Santa Maria, v. \volume, \issue, 2022~ \textbullet ~~\doi};
+      \draw node[anchor=north, inner sep=2mm] at (\textwidth / 2, 0) {\footnotesize Ci. e Nat., Santa Maria, v. \volume, \eJournal, 2022~ \textbullet ~~\doi};
       \node[anchor=north, inner sep=2mm, yshift=-4mm] at (\textwidth / 2, 0) {\footnotesize Submissão: \submitionDate~ \textbullet ~~Aprovação: \approvalDate~ \textbullet ~~Publicação: \publishDate};
 
       \draw[line width=1pt, cncolor] (-20mm, -10mm) -- (\paperwidth, -10mm);
     \end{scope}
   \end{tikzpicture}
- \par\vspace{24mm}
+ \par\vspace{14mm}
 }
-
+%
 \newcommand{\cncoverfooter}{
   \noindent\begin{tikzpicture}[remember picture, overlay]
     \begin{scope}[shift={(0,0)}]
@@ -65,9 +95,9 @@
       \node[anchor=west, inner sep=0mm] at (20mm, -5.0mm) {\footnotesize Published by Ciência e Natura under a CC BY-NC-SA 4.0 license.};
     \end{scope}
   \end{tikzpicture}
- \par\vspace{10mm}
+ \par\vspace{-7mm}
 }
-
+%
 \definecolor{cncolor}{RGB}{0,102,153}
 \setul{3pt}{2.5pt}
 \setulcolor{cncolor}
@@ -113,6 +143,40 @@
 \par\smallskip\noindent
   \small{\bf palavras-chave:}~#1
 }}
+
+\newcommand{\shortHeaderTitle}[1]{\def\shortHeaderTitle{#1}}
+\newcommand{\shortHeaderAuthors}[1]{\def\shortHeaderAuthors{#1}}
+
+\makeatletter
+\renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{3mm}}
+\makeatother
+
+\setlength{\parskip}{12pt} % 1ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{20mm} 
+\setlength{\tabcolsep}{30mm}
+
+\newcommand{\coverpage}{
+  \thispagestyle{empty}
+  \cncoverheader
+  
+  \cenSection
+  
+  \englishTitle
+  \vspace{5mm}
+  \portugueseTitle
+  
+  \theauthor
+  \affil
+  
+  \portugueseAbstract
+  \portugueseKeywords
+  
+  \englishAbstract
+  \englishKeywords
+  \vfill
+  \cncoverfooter
+  \clearpage
+}
 %
 %----------------------------------------------------------------------------------------
 %	YOUR PACKAGES
@@ -130,7 +194,7 @@
 %
 \volume{44}
 %
-\issue{eXX}
+\eJournal{eXX}
 %
 \doi{https://doi.org/10.5902/2179460Xxxxxx}
 %
@@ -160,6 +224,9 @@
   \affiliation{I}{Brown University, USA}
   \affiliation{II}{University of Oxford, UK}
 }
+
+\shortHeaderTitle{The title}
+\shortHeaderAuthors{Josiiah~{\it~at.~al}}
 %
 \portugueseAbstract{
   Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo.Não sou faixa preta cumpadi, 
@@ -181,23 +248,110 @@
 %
 %----------------------------------------------------------------------------------------
 \begin{document}
-\thispagestyle{empty}
-\cncoverheader
+  \coverpage
 
-\cenSection
+  Mussum Ipsum, cacilds vidis litro abertis. Copo furadis é disculpa de bebadis, arcu quam euismod magna.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.Leite de capivaris, leite de mula manquis sem cabeça.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!\par
+  
+  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Leite de capivaris, leite de mula manquis sem cabeça.Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.
+  
+  Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Leite de capivaris, leite de mula manquis sem cabeça.Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!
 
-\englishTitle
-\portugueseTitle
 
-\theauthor
-\affil
+  \section{Introduction}
 
-\portugueseAbstract
-\portugueseKeywords
+  Delegadis gente finis, bibendum egestas augue arcu ut est.Casamentiss faiz malandris se pirulitá.Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Interagi no mé, cursus quis, vehicula ac nisi.
+  
+  Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.Atirei o pau no gatis, per gatis num morreus.
+  
+  \subsection{Sub Introduction}
 
-\englishAbstract
-\englishKeywords
-\vfill
-\cncoverfooter
-
+  Pra lá , depois divoltis porris, paradis.A ordem dos tratores não altera o pão duris.Quem num gosta di mé, boa gentis num é.Aenean aliquam molestie leo, vitae iaculis nisl.
+  
+  Quem num gosta di mé, boa gentis num é.Sapien in monti palavris qui num significa nadis i pareci latim.Aenean aliquam molestie leo, vitae iaculis nisl.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.
+  
+  Cevadis im ampola pa arma uma pindureta.Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.Quem num gosta di mé, boa gentis num é.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!
+  
+  Suco de cevadiss deixa as pessoas mais interessantis.Quem num gosta di mim que vai caçá sua turmis!Pra lá , depois divoltis porris, paradis.Não sou faixa preta cumpadi, sou preto inteiris, inteiris.
+  
+  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Atirei o pau no gatis, per gatis num morreus.Quem num gosta di mé, boa gentis num é.Aenean aliquam molestie leo, vitae iaculis nisl.
+  
+  Mé faiz elementum girarzis, nisi eros vermeio.Suco de cevadiss deixa as pessoas mais interessantis.Aenean aliquam molestie leo, vitae iaculis nisl.Quem manda na minha terra sou euzis!
+  
+  Sapien in monti palavris qui num significa nadis i pareci latim.Quem num gosta di mé, boa gentis num é.Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Mé faiz elementum girarzis, nisi eros vermeio.
+  
+  Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Mé faiz elementum girarzis, nisi eros vermeio.In elementis mé pra quem é amistosis quis leo.Si num tem leite então bota uma pinga aí cumpadi!
+  
+  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.Mé faiz elementum girarzis, nisi eros vermeio.Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.
+  
+  Atirei o pau no gatis, per gatis num morreus.A ordem dos tratores não altera o pão duris.Per aumento de cachacis, eu reclamis.Leite de capivaris, leite de mula manquis sem cabeça.
+  
+  Quem num gosta di mim que vai caçá sua turmis!Cevadis im ampola pa arma uma pindureta.Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.In elementis mé pra quem é amistosis quis leo.
+  
+  Mé faiz elementum girarzis, nisi eros vermeio.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Casamentiss faiz malandris se pirulitá.Sapien in monti palavris qui num significa nadis i pareci latim.
+  
+  Interagi no mé, cursus quis, vehicula ac nisi.Casamentiss faiz malandris se pirulitá.Quem num gosta di mim que vai caçá sua turmis!Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
+  
+  Quem num gosta di mim que vai caçá sua turmis!Diuretics paradis num copo é motivis de denguis.Quem manda na minha terra sou euzis!Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.
+  
+  Cevadis im ampola pa arma uma pindureta.Interagi no mé, cursus quis, vehicula ac nisi.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Paisis, filhis, espiritis santis.
+  
+  In elementis mé pra quem é amistosis quis leo.Diuretics paradis num copo é motivis de denguis.Leite de capivaris, leite de mula manquis sem cabeça.Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.
+  
+  Delegadis gente finis, bibendum egestas augue arcu ut est.In elementis mé pra quem é amistosis quis leo.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Quem num gosta di mim que vai caçá sua turmis!
+  
+  Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Cevadis im ampola pa arma uma pindureta.Casamentiss faiz malandris se pirulitá.Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!
+  
+  Aenean aliquam molestie leo, vitae iaculis nisl.Não sou faixa preta cumpadi, sou preto inteiris, inteiris.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.Delegadis gente finis, bibendum egestas augue arcu ut est.
+  
+  Diuretics paradis num copo é motivis de denguis.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
+  
+  Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.Não sou faixa preta cumpadi, sou preto inteiris, inteiris.Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.
+  
+  Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis!Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.Suco de cevadiss deixa as pessoas mais interessantis.Paisis, filhis, espiritis santis.
+  
+  Aenean aliquam molestie leo, vitae iaculis nisl.Paisis, filhis, espiritis santis.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Interagi no mé, cursus quis, vehicula ac nisi.
+  
+  Quem num gosta di mim que vai caçá sua turmis!Copo furadis é disculpa de bebadis, arcu quam euismod magna.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Leite de capivaris, leite de mula manquis sem cabeça.
+  
+  Mauris nec dolor in eros commodo tempor. Aenean aliquam molestie leo, vitae iaculis nisl.Paisis, filhis, espiritis santis.Mé faiz elementum girarzis, nisi eros vermeio.Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.
+  
+  Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Atirei o pau no gatis, per gatis num morreus.Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.Per aumento de cachacis, eu reclamis.
+  
+  Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.Quem num gosta di mé, boa gentis num é.Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Viva Forevis aptent taciti sociosqu ad litora torquent.
+  
+  Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Cevadis im ampola pa arma uma pindureta.Si num tem leite então bota uma pinga aí cumpadi!Quem num gosta di mim que vai caçá sua turmis!
+  
+  Si num tem leite então bota uma pinga aí cumpadi!Não sou faixa preta cumpadi, sou preto inteiris, inteiris.Per aumento de cachacis, eu reclamis.Casamentiss faiz malandris se pirulitá.
+  
+  Interagi no mé, cursus quis, vehicula ac nisi.Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.A ordem dos tratores não altera o pão duris.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.
+  
+  Atirei o pau no gatis, per gatis num morreus.Interagi no mé, cursus quis, vehicula ac nisi.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Praesent vel viverra nisi. Mauris aliquet nunc non turpis scelerisque, eget.
+  
+  Detraxit consequat et quo num tendi nada.Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.Diuretics paradis num copo é motivis de denguis.Sapien in monti palavris qui num significa nadis i pareci latim.
+  
+  Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.
+  
+  Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.Cevadis im ampola pa arma uma pindureta.
+  
+  Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.Sapien in monti palavris qui num significa nadis i pareci latim.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!
+  
+  Mé faiz elementum girarzis, nisi eros vermeio.Leite de capivaris, leite de mula manquis sem cabeça.Si num tem leite então bota uma pinga aí cumpadi!Casamentiss faiz malandris se pirulitá.
+  
+  Si num tem leite então bota uma pinga aí cumpadi!Quem num gosta di mim que vai caçá sua turmis!Pra lá , depois divoltis porris, paradis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.
+  
+  Paisis, filhis, espiritis santis.Viva Forevis aptent taciti sociosqu ad litora torquent.Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.Quem manda na minha terra sou euzis!
+  
+  Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.Cevadis im ampola pa arma uma pindureta.Atirei o pau no gatis, per gatis num morreus.In elementis mé pra quem é amistosis quis leo.
+  
+  Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus.A ordem dos tratores não altera o pão duris.Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis.
+  
+  Cevadis im ampola pa arma uma pindureta.Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.Mé faiz elementum girarzis, nisi eros vermeio.Diuretics paradis num copo é motivis de denguis.
+  
+  Detraxit consequat et quo num tendi nada.Interagi no mé, cursus quis, vehicula ac nisi.Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis.Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
+  
+  In elementis mé pra quem é amistosis quis leo.Sapien in monti palavris qui num significa nadis i pareci latim.Si num tem leite então bota uma pinga aí cumpadi!Nullam volutpat risus nec leo commodo, ut interdum diam laoreet. Sed non consequat odio.
+  
+  Mais vale um bebadis conhecidiss, que um alcoolatra anonimis.In elementis mé pra quem é amistosis quis leo.Cevadis im ampola pa arma uma pindureta.Per aumento de cachacis, eu reclamis.
+  
+  Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.A ordem dos tratores não altera o pão duris.Quem num gosta di mim que vai caçá sua turmis!Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis.
 \end{document}
