@@ -41,6 +41,9 @@
 %	TEMPLATE CONFIGURATIONS (not for authors)
 %----------------------------------------------------------------------------------------
 %
+\newcommand{\articlelanguage}[1]{\def\articlelanguage{#1}}
+\newcommand{\yearonfooter}[1]{\def\yearonfooter{#1}}
+
 \makeatletter
 \renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{3mm}}
 \makeatother
@@ -61,7 +64,7 @@
 %
 \renewcommand\headrule{\vspace{-1mm}\noindent\makebox[\linewidth]{\color{cncolor}\rule{\linewidth}{1.5pt}}}
 %footer
-\fancyfoot[C]{{\color{cncolor}\rule{90mm}{1.5pt}}\\[-3pt]{\footnotesize Ci. e Nat., Santa Maria, v.\volume, \eJournal, {\the\year}}}
+\fancyfoot[C]{{\color{cncolor}\rule{90mm}{1.5pt}}\\[-3pt]{\footnotesize Ci. e Nat., Santa Maria, v.\volume, \eJournal, \yearonfooter}}
 
 \newcommand{\issn}[1]{\def\issn{#1}}
 \newcommand{\volume}[1]{\def\volume{#1}}
@@ -208,9 +211,13 @@
 %
 \publishDate{xx/xx/xx}
 %
+\yearonfooter{2023}
+%
 %----------------------------------------------------------------------------------------
 %	PAPER INFO (for authors)
 %----------------------------------------------------------------------------------------
+%
+\articlelanguage{br} %must be en or br
 %
 \cenSection{Chemistry}
 %
@@ -230,7 +237,7 @@
 }
 
 \shortHeaderTitle{The title}
-\shortHeaderAuthors{Josiiah~{\it~at.~al}}
+\shortHeaderAuthors{Carberry{\it~et~al.}}
 %
 \portugueseAbstract{
   Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo.Não sou faixa preta cumpadi, 
