@@ -14,8 +14,6 @@
             right=20mm,
             top=12.5mm,
             bottom=15mm,
-%            headheight=10mm,
-%            footskip=0mm,
             includehead,
             includefoot,
             ]{geometry}
@@ -72,6 +70,7 @@
 \newcommand{\submitionDate}[1]{\def\submitionDate{#1}}
 \newcommand{\approvalDate}[1]{\def\approvalDate{#1}}
 \newcommand{\publishDate}[1]{\def\publishDate{#1}}
+\newcommand{\custombullet}{\raisebox{1.3pt}{\tiny\textbullet}}
 
 \newcommand{\cncoverheader}{
   \noindent\begin{tikzpicture}[remember picture, overlay]
@@ -80,11 +79,11 @@
       \node[anchor=south,inner sep=0mm] at (\textwidth/2, 7mm) {\includegraphics[height=16mm]{images/logo-ciencia-e-natura.jpg}};
       \node[anchor=south east, inner sep=0mm] at (\textwidth, 9mm) {\includegraphics[height=17mm]{images/revista.jpg}};
       \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 6mm) {\footnotesize ISSN \issn};
-      \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 1.5mm) {\bf\footnotesize OPEN~\includegraphics[width=6px]{images/open-access.eps}~ACCESS};
+      \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 1.5mm) {\includegraphics[height=4.5mm]{images/acesso-aberto.png}};
 
       \draw[line width=1pt, cncolor] (-20mm, -1.5mm) -- (\paperwidth, -1.5mm);
-      \draw node[anchor=north, inner sep=2mm] at (\textwidth / 2, 0) {\footnotesize Ci. e Nat., Santa Maria, v. \volume, \eJournal, 2022~ \textbullet ~~\doi};
-      \node[anchor=north, inner sep=2mm, yshift=-4mm] at (\textwidth / 2, 0) {\footnotesize Submissão: \submitionDate~ \textbullet ~~Aprovação: \approvalDate~ \textbullet ~~Publicação: \publishDate};
+      \draw node[anchor=north, inner sep=2mm] at (\textwidth / 2, 0) {\footnotesize Ci. e Nat., Santa Maria, v. \volume, \eJournal, 2022 \custombullet~\doi};
+      \node[anchor=north, inner sep=2mm, yshift=-4mm] at (\textwidth / 2, 0) {\footnotesize Submissão: \submitionDate~\custombullet~Aprovação: \approvalDate~\custombullet~Publicação: \publishDate};
 
       \draw[line width=1pt, cncolor] (-20mm, -10mm) -- (\paperwidth, -10mm);
     \end{scope}
