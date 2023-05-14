@@ -203,25 +203,27 @@
   \cenSection
   
   \centering
+  \vspace{8mm}
   \if@english
     {\Large\bf\englishTitle}\\[5mm]
     {\large\portugueseTitle}
   \else
     {\Large\bf\portugueseTitle}\\[5mm]
     {\large\englishTitle}
-  \fi
-  
-  \theauthor
-  \affil
+  \fi\\[7mm]  
+
+  \theauthor\par\vspace{4mm}
+  \affil\par\vspace{5mm}
 
   \if@english
     \englishAbstract
-    \englishKeywords
+    \englishKeywords\\[4mm]
     \portugueseAbstract
     \portugueseKeywords
   \else
     \portugueseAbstract
-    \portugueseKeywords
+    \portugueseKeywords\\[4mm]
+
     \englishAbstract
     \englishKeywords
   \fi
@@ -232,7 +234,6 @@
 
   \setlength{\parskip}{12pt}
   \setlength{\parindent}{36pt} 
-
 }
 
 \makeatletter
