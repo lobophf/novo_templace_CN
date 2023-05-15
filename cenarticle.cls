@@ -63,7 +63,6 @@
 %	HEADER
 %----------------------------------------------------------------------------------------
 %
-%
 \if@english
   \def\openacessfile{images/open-access.png}
 \else
@@ -153,11 +152,12 @@
 \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\faOrcid}}}
 
 \newcommand{\authorinfo}[3][]{%
-  {\centering\bf
-  {\large #2}% author's name
-  \ifthenelse{\isempty{#1}}{}% do nothing if ORCID is not provided
-    {\hspace{0.1em}\textsuperscript{\footnotesize #3}\hspace{0.1em}{\large\orcid{#1}\hspace{-0.6em}}}
-  }
+  \large
+  \mbox{
+    {\bf#2}% 
+    {\ifthenelse{\equal{#3}{}}{}{\textsuperscript{~\bf#3}}}%
+    {\ifthenelse{\equal{#1}{}}{}{\hspace{1.2pt}\orcid{#1}}}%
+  }%
 }
 
 \newcommand{\affil}[1]{\def\affil{\par#1}}
