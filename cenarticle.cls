@@ -29,6 +29,9 @@
   \RequirePackage[authoryear]{natbib}
 \fi
 %
+\RequirePackage[default,scale=1.00]{opensans}
+\RequirePackage{microtype}
+
 \RequirePackage{xcolor}
 
 \RequirePackage{tikz}
@@ -81,7 +84,7 @@
 %
 \fancyhead[EL]{\thepage~~\textbar{}~\shortHeaderTitle} % 
 \fancyhead[OR]{\shortHeaderAuthors~\textbar{}~~\thepage} % 
-\fancyhead[ER]{} % 
+\fancyhead[ER]{} %
 \fancyhead[OL]{} % 
 %
 \renewcommand\headrule{\vspace{-1mm}\noindent\makebox[\linewidth]{\color{cncolor}\rule{\linewidth}{1.5pt}}}
@@ -98,15 +101,15 @@
 \newcommand{\cncoverheader}{
   \noindent\begin{tikzpicture}[remember picture, overlay]
     \begin{scope}[shift={(0,-10mm)}]
-      \node[anchor=south west,inner sep=0mm] at (0, 0) {\includegraphics[height=25mm]{images/logo-ufsm.png}};
-      \node[anchor=south,inner sep=0mm] at (\textwidth/2, 7mm) {\includegraphics[height=16mm]{images/logo-ciencia-e-natura.jpg}};
-      \node[anchor=south east, inner sep=0mm] at (\textwidth, 9mm) {\includegraphics[height=17mm]{images/revista.jpg}};
-      \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 6mm) {\footnotesize ISSN \issn};
+      \node[anchor=south west,inner sep=0mm] at (0, 0) {\includegraphics[height=27.5mm]{images/logo-ufsm.png}};
+      \node[anchor=south,inner sep=0mm] at (\textwidth/2, 7mm) {\includegraphics[width=91.3mm]{images/logo-ciencia-e-natura.jpg}};
+      \node[anchor=south east, inner sep=0mm] at (\textwidth, 9mm) {\includegraphics[height=22.6mm]{images/revista.jpg}};
+      \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 6mm) {\fontsize{8pt}{2pt}\selectfont ISSN \issn};
       \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 1.5mm) {\includegraphics[height=4.5mm]{\openacessfile}};
 
       \draw[line width=1pt, cncolor] (-20mm, -1.5mm) -- (\paperwidth, -1.5mm);
-      \draw node[anchor=north, inner sep=2mm] at (\textwidth / 2, 0) {\footnotesize Ci. e Nat., Santa Maria, v. \volume, \eJournal, 2022 \custombullet~\doi};
-      \node[anchor=north, inner sep=2mm, yshift=-4mm] at (\textwidth / 2, 0) {\footnotesize \submittedtext: \submitionDate~\custombullet~\approvedtext: \approvalDate~\custombullet~\publishedtext: \publishDate};
+      \draw node[anchor=north, inner sep=2mm] at (\textwidth / 2, 0) {\fontsize{8pt}{2pt}\selectfont  Ci. e Nat., Santa Maria, v. \volume, \eJournal, 2022 \textbullet~\doi};
+      \node[anchor=north, inner sep=2mm, yshift=-4mm] at (\textwidth / 2, 0) {\fontsize{8pt}{2pt}\selectfont \submittedtext: \submitionDate~\textbullet~\approvedtext: \approvalDate~\textbullet~\publishedtext: \publishDate};
 
       \draw[line width=1pt, cncolor] (-20mm, -10mm) -- (\paperwidth, -10mm);
     \end{scope}
@@ -133,8 +136,8 @@
   \noindent\begin{tikzpicture}[remember picture, overlay]
     \begin{scope}[shift={(0,0)}]
       \draw[line width=1pt, cncolor] (0, 0) -- (\textwidth, 0);
-      \node[anchor=north west,inner sep=0mm] at (0, -1.5mm) {\includegraphics[height=6.5mm]{images/creativecommons.png}};
-      \node[anchor=west, inner sep=0mm] at (20mm, -5.0mm) {\footnotesize \creativecommonstext};
+      \node[anchor=north west,inner sep=0mm] at (0, -1.5mm) {\includegraphics[width=17.4mm]{images/creativecommons.png}};
+      \node[anchor=west, inner sep=0mm] at (20mm, -5.0mm) {\fontsize{8pt}{0pt}\selectfont \creativecommonstext};
     \end{scope}
   \end{tikzpicture}
  \par\vspace{-7mm}
@@ -144,7 +147,7 @@
 \setul{3pt}{2.5pt}
 \setulcolor{cncolor}
 
-\newcommand{\cenSection}[1]{\def\cenSection{\flushleft{\small#1}}}
+\newcommand{\cenSection}[1]{\def\cenSection{\flushleft{\bf\fontsize{10pt}{2pt}\selectfont#1}}}
 
 \newcommand{\englishTitle}[1]{\def\englishTitle{#1}}
 \newcommand{\portugueseTitle}[1]{\def\portugueseTitle{#1}}
@@ -152,7 +155,7 @@
 \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\faOrcid}}}
 
 \newcommand{\authorinfo}[3][]{%
-  \large
+  \fontsize{12pt}{0pt}
   \mbox{
     {\bf#2}% 
     {\ifthenelse{\equal{#3}{}}{}{\textsuperscript{~\bf#3}}}%
@@ -160,33 +163,35 @@
   }%
 }
 
-\newcommand{\affil}[1]{\def\affil{\par#1}}
-\newcommand{\affiliation}[2]{\textsuperscript{\footnotesize #1}#2\par}
+\newcommand{\affil}[1]{\def\affil{\par\fontsize{10pt}{0pt}\selectfont#1}}
+\newcommand{\affiliation}[2]{\textsuperscript{\fontsize{10pt}{0pt}\selectfont#1}#2\par}
 
-\newcommand{\portugueseAbstract}[1]{\def\portugueseAbstract{
-  \flushleft
-  {\bf RESUMO}\\[-8pt]
-  {\color{cncolor}\rule{50mm}{1.5pt}}
-  \par\nobreak\noindent\ignorespaces\justifying#1
+\newcommand{\portugueseAbstract}[1]{\def\portugueseAbstract{%
+  \noindent\flushleft
+  {\fontsize{12pt}{0pt}\selectfont\textbf{RESUMO}}\\[6pt]
+  {\color{cncolor}\rule{\textwidth / 2}{1.5pt}}\\[5pt]
+  \fontsize{10pt}{15pt}\selectfont
+  \nobreak\noindent\ignorespaces\justifying#1
 }}
 %
-\newcommand{\englishAbstract}[1]{\def\englishAbstract{
-  \flushleft
-  {\bf ABSTRACT}\\[-8pt]
-  {\color{cncolor}\rule{50mm}{1.5pt}}
-  \par\nobreak\noindent\ignorespaces\justifying#1
+\newcommand{\englishAbstract}[1]{\def\englishAbstract{%
+\noindent\flushleft
+  {\fontsize{12pt}{0pt}\selectfont\textbf{ABSTRACT}}\\[6pt]
+  {\color{cncolor}\rule{\textwidth / 2}{1.5pt}}\\[5pt]
+  \fontsize{10pt}{15pt}\selectfont
+  \nobreak\noindent\ignorespaces\justifying#1
 }}
 %
 \newcommand{\englishKeywords}[1]{\def\englishKeywords{
-\par\smallskip\noindent
-  \small{\bf keywords:}~#1
+  \par\noindent\\[8pt]
+  \fontsize{10pt}{0pt}\selectfont{\bf keywords:}~#1
 }}
 %
 \newcommand{\portugueseKeywords}[1]{\def\portugueseKeywords{
-\par\smallskip\noindent
-  \small{\bf palavras-chave:}~#1
+  \par\noindent\\[8pt]
+  \fontsize{10pt}{0pt}\selectfont{\bf palavras-chave:}~#1
 }}
-
+%
 \newcommand{\shortHeaderTitle}[1]{\def\shortHeaderTitle{#1}}
 \newcommand{\shortHeaderAuthors}[1]{\def\shortHeaderAuthors{#1}}
 
@@ -198,6 +203,7 @@
 
 \newcommand{\coverpage}{
   \thispagestyle{empty}
+
   \cncoverheader
   
   \cenSection
@@ -205,11 +211,11 @@
   \centering
   \vspace{8mm}
   \if@english
-    {\Large\bf\englishTitle}\\[5mm]
-    {\large\portugueseTitle}
+    {\fontsize{16pt}{18pt}\selectfont\bf\englishTitle}\\[5mm]
+    {\fontsize{14pt}{16pt}\portugueseTitle}
   \else
-    {\Large\bf\portugueseTitle}\\[5mm]
-    {\large\englishTitle}
+    {\fontsize{16pt}{18pt}\selectfont\Large\bf\portugueseTitle}\\[5mm]
+    {\fontsize{14pt}{16pt}\englishTitle}
   \fi\\[7mm]  
 
   \theauthor\par\vspace{4mm}
@@ -228,7 +234,6 @@
     \englishKeywords
   \fi
  
-  \vfill
   \cncoverfooter
   \clearpage
 
