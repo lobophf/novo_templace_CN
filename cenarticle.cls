@@ -59,7 +59,6 @@
 \pagestyle{fancy} % All pages have headers and footers
 \setlength{\headheight}{10mm}
 \setlength{\headsep}{5mm} 
-\setlength{\footskip}{4mm}
 \addtolength{\topmargin}{0mm}
 %
 %----------------------------------------------------------------------------------------
@@ -82,12 +81,6 @@
   \def\publishedtext{Published}
 \fi
 %
-\fancyhead[EL]{\thepage~~\textbar{}~\shortHeaderTitle} % 
-\fancyhead[OR]{\shortHeaderAuthors~\textbar{}~~\thepage} % 
-\fancyhead[ER]{} %
-\fancyhead[OL]{} % 
-%
-\renewcommand\headrule{\vspace{-1mm}\noindent\makebox[\linewidth]{\color{cncolor}\rule{\linewidth}{1.5pt}}}
 %
 \newcommand{\issn}[1]{\def\issn{#1}}
 \newcommand{\volume}[1]{\def\volume{#1}}
@@ -129,8 +122,6 @@
 %
 \newcommand{\yearonfooter}[1]{\def\yearonfooter{#1}}
 %
-\fancyfoot{} % Blank out the default footer
-\fancyfoot[C]{{\color{cncolor}\rule{90mm}{1.5pt}}\\[-3pt]{\footnotesize Ci. e Nat., Santa Maria, v.\volume, \eJournal, \yearonfooter}}
 %
 \newcommand{\cncoverfooter}{
   \noindent\begin{tikzpicture}[remember picture, overlay]
@@ -157,7 +148,7 @@
 \newcommand{\authorinfo}[3][]{%
   \fontsize{12pt}{0pt}
   \mbox{
-    {\bf#2}% 
+    {\hspace{-3pt}\bf#2}% 
     {\ifthenelse{\equal{#3}{}}{}{\textsuperscript{~\bf#3}}}%
     {\ifthenelse{\equal{#1}{}}{}{\hspace{1.2pt}\orcid{#1}}}%
   }%
@@ -202,7 +193,22 @@
 \fi
 
 \newcommand{\coverpage}{
-  \thispagestyle{empty}
+
+\setlength{\footskip}{27.00809pt}
+\enlargethispage{-7mm}
+\renewcommand{\headrulewidth}{0.0pt}
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+
+\fancyfoot{
+  \noindent\begin{tikzpicture}
+    \begin{scope}[shift={(0,0)}]
+      \draw[line width=1.5pt, cncolor] (0, 0) -- (\textwidth, 0);
+      \node[anchor=north west,inner sep=0mm] at (0, -1.5mm) {\includegraphics[width=17.4mm]{images/creativecommons.png}};
+      \node[anchor=west, inner sep=0mm] at (20mm, -5.0mm) {\fontsize{8pt}{0pt}\selectfont \creativecommonstext};
+    \end{scope}
+  \end{tikzpicture}
+}
 
   \cncoverheader
   
@@ -229,16 +235,27 @@
   \else
     \portugueseAbstract
     \portugueseKeywords\\[4mm]
-
     \englishAbstract
     \englishKeywords
   \fi
- 
-  \cncoverfooter
-  \clearpage
+
+  \ifnum\value{page}=1
+    \relax\clearpage
+  \else
+  \fi
+
+  \fancyfoot{} % Blank out the default footer
+  \fancyfoot[C]{{\color{cncolor}\rule{90mm}{1.5pt}}\\[-3pt]{\footnotesize Ci. e Nat., Santa Maria, v.\volume, \eJournal, \yearonfooter}}
+
+  \renewcommand\headrule{\vspace{-1mm}\noindent\makebox[\linewidth]{\color{cncolor}\rule{\linewidth}{1.5pt}}}
+  \fancyhead[EL]{\thepage~~\textbar{}~\shortHeaderTitle} % 
+  \fancyhead[OR]{\shortHeaderAuthors~\textbar{}~~\thepage} % 
+  \fancyhead[ER]{} %
+  \fancyhead[OL]{} % 
 
   \setlength{\parskip}{12pt}
   \setlength{\parindent}{36pt} 
+
 }
 
 \makeatletter
