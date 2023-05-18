@@ -51,6 +51,7 @@
 
 \RequirePackage{ragged2e}
 \RequirePackage{setspace}
+\RequirePackage{titlesec}
 
 %
 %----------------------------------------------------------------------------------------
@@ -61,6 +62,12 @@
 \setlength{\headheight}{10mm}
 \setlength{\headsep}{5mm} 
 \addtolength{\topmargin}{0mm}
+
+\titlespacing*{\section}{0pt}{9mm}{3mm}
+\titleformat*{\section}{\fontsize{14pt}{0pt}\bfseries}
+
+\titlespacing*{\subsection}{0pt}{0mm}{3mm}
+\titleformat*{\subsection}{\normalsize\bfseries}
 %
 %----------------------------------------------------------------------------------------
 %	HEADER
@@ -93,8 +100,8 @@
 \newcommand{\custombullet}{\raisebox{1.3pt}{\tiny\textbullet}}
 %
 \newcommand{\cncoverheader}{
-  \noindent\begin{tikzpicture}[overlay]
-    \begin{scope}[shift={(0,-11mm)}]
+ \noindent\begin{tikzpicture}[overlay]
+    \begin{scope}[shift={(0,-10mm)}]
       \node[anchor=south west,inner sep=0mm] at (0, 0) {\includegraphics[height=27.5mm]{images/logo-ufsm.png}};
       \node[anchor=south,inner sep=0mm] at (\textwidth/2, 7mm) {\includegraphics[width=91.3mm]{images/logo-ciencia-e-natura.jpg}};
       \node[anchor=south east, inner sep=0mm] at (\textwidth, 9mm) {\includegraphics[height=22.6mm]{images/revista.jpg}};
@@ -104,11 +111,10 @@
       \draw[line width=1.5pt, cncolor] (-20mm, -1.5mm) -- (\paperwidth, -1.5mm);
       \draw node[anchor=north, inner sep=2.5mm] at (\textwidth / 2, 0) {\fontsize{8pt}{2pt}\selectfont  Ci. e Nat., Santa Maria, v. \volume, \eJournal, 2022 \textbullet~\doi};
       \node[anchor=north, inner sep=2mm, yshift=-4.5mm] at (\textwidth / 2, 0) {\fontsize{8pt}{2pt}\selectfont \submittedtext: \submitionDate~\textbullet~\approvedtext: \approvalDate~\textbullet~\publishedtext: \publishDate};
-
       \draw[line width=1.5pt, cncolor] (-20mm, -10.0mm) -- (\paperwidth, -10mm);
     \end{scope}
   \end{tikzpicture}
-  \vspace*{16mm}
+  \vspace{15.5mm}
 }
 %
 %----------------------------------------------------------------------------------------
@@ -123,12 +129,11 @@
 %
 \newcommand{\yearonfooter}[1]{\def\yearonfooter{#1}}
 %
-%
 \definecolor{cncolor}{RGB}{0,102,153}
 \setul{3pt}{2.5pt}
 \setulcolor{cncolor}
 
-\newcommand{\cenSection}[1]{\def\cenSection{\flushleft{\bf\fontsize{10pt}{0pt}\selectfont#1}}}
+\newcommand{\cenSection}[1]{\def\cenSection{\flushleft{\bf\footnotesize\selectfont#1}}}
 
 \newcommand{\englishTitle}[1]{\def\englishTitle{#1}}
 \newcommand{\portugueseTitle}[1]{\def\portugueseTitle{#1}}
@@ -147,30 +152,34 @@
 \newcommand{\affil}[1]{\def\affil{\par\fontsize{10pt}{0pt}\selectfont#1}}
 \newcommand{\affiliation}[2]{\textsuperscript{\fontsize{10pt}{0pt}\selectfont#1}#2\par}
 
+
+\newcommand{\makeabstract}[2]{
+  \noindent\flushleft\setstretch{1.0}
+  {\normalsize\textbf{#1}}\\[0pt]
+  {\color{cncolor}\rule{\textwidth / 2}{1.5pt}}\\[3pt]
+  \footnotesize\selectfont\setstretch{1.3}
+  \nobreak\noindent\ignorespaces\justifying#2
+}
+
 \newcommand{\portugueseAbstract}[1]{\def\portugueseAbstract{%
-  \noindent\flushleft
-  {\fontsize{12pt}{0pt}\selectfont\textbf{RESUMO}}\\[6pt]
-  {\color{cncolor}\rule{\textwidth / 2}{1.5pt}}\\[5pt]
-  \fontsize{10pt}{15pt}\selectfont
-  \nobreak\noindent\ignorespaces\justifying#1
+  \makeabstract{RESUMO}{#1}
 }}
 %
 \newcommand{\englishAbstract}[1]{\def\englishAbstract{%
-\noindent\flushleft
-  {\fontsize{12pt}{0pt}\selectfont\textbf{ABSTRACT}}\\[6pt]
-  {\color{cncolor}\rule{\textwidth / 2}{1.5pt}}\\[5pt]
-  \fontsize{10pt}{15pt}\selectfont
-  \nobreak\noindent\ignorespaces\justifying#1
+  \makeabstract{ABSTRACT}{#1}
 }}
+
+\newcommand{\makekeywords}[2]{
+  \noindent\\[6pt]
+  \footnotesize{\bf#1:}~#2
+}
 %
 \newcommand{\englishKeywords}[1]{\def\englishKeywords{
-  \par\noindent\\[8pt]
-  \fontsize{10pt}{0pt}\selectfont{\bf keywords:}~#1
+  \makekeywords{keywords}{#1}
 }}
 %
 \newcommand{\portugueseKeywords}[1]{\def\portugueseKeywords{
-  \par\noindent\\[8pt]
-  \fontsize{10pt}{0pt}\selectfont{\bf palavras-chave:}~#1
+  \makekeywords{palavras-chave}{#1}
 }}
 %
 \newcommand{\shortHeaderTitle}[1]{\def\shortHeaderTitle{#1}}
@@ -182,11 +191,6 @@
   \bibliographystyle{cen}
 \fi
 
-\newcommand{\clearheader}{
-  \renewcommand{\headrulewidth}{0pt}
-  \fancyhead{} % Blank out the default header
-}
-
 \newcommand{\setupcoverpagefooter}{
   \setlength{\footskip}{27.00809pt}
   \enlargethispage{-5mm}
@@ -197,48 +201,10 @@
       \begin{scope}[shift={(0,7mm)}]
         \draw[line width=1.5pt, cncolor] (0, 0) -- (\textwidth, 0);
         \node[anchor=north west,inner sep=0mm] at (0, -1.5mm) {\includegraphics[width=17.4mm]{images/creativecommons.png}};
-        \node[anchor=west, inner sep=0mm] at (20mm, -4.8mm) {\fontsize{8pt}{0pt}\selectfont \creativecommonstext};
+        \node[anchor=west, inner sep=0mm] at (20mm, -4.8mm) {\scriptsize\selectfont \creativecommonstext};
       \end{scope}
     \end{tikzpicture}
   }
-}
-
-\newcommand{\titles}{
-  \centering
-  \begin{spacing}{1.3}
-    \if@english
-        {\fontsize{16pt}{0pt}\selectfont\bf\englishTitle}\\[5mm]
-        {\fontsize{14pt}{0pt}\portugueseTitle}
-    \else
-      {\fontsize{16pt}{0pt}\selectfont\bf\portugueseTitle}\\[5mm]
-      {\fontsize{14pt}{0pt}\englishTitle}
-    \fi  
-  \end{spacing}
-}
-
-\renewcommand{\abstract}{
-\if@english
-    \englishAbstract
-    \englishKeywords\\[4mm]
-    \portugueseAbstract
-    \portugueseKeywords
-  \else
-    \portugueseAbstract
-    \portugueseKeywords\\[4mm]
-    \englishAbstract
-    \englishKeywords
-  \fi
-}
-
-\newcommand{\addextraspaceforcoverpage}{
-  \ifnum\value{page}=1
-    \relax\clearpage
-  \fi
-}
-
-\newcommand{\setupusualfooter}{
-  \fancyfoot{} % Blank out the default footer
-  \fancyfoot[C]{{\color{cncolor}\rule{90mm}{1.5pt}}\\[-3pt]{\footnotesize Ci. e Nat., Santa Maria, v.\volume, \eJournal, \yearonfooter}}
 }
 
 \newcommand{\setupusualheader}{
@@ -250,15 +216,55 @@
   \fancyhead[OL]{} % 
 }
 
+\newcommand{\clearheader}{
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyhead{} % Blank out the default header
+}
+
+\newcommand{\titles}{
+  \centering
+    \if@english
+      {\fontsize{16pt}{0pt}\selectfont\bf\englishTitle}\\[5mm]
+      {\fontsize{14pt}{0pt}\portugueseTitle}
+    \else
+      {\fontsize{16pt}{0pt}\selectfont\bf\portugueseTitle}\\[5mm]
+      {\fontsize{14pt}{0pt}\englishTitle}
+    \fi  
+}
+
+\renewcommand{\abstract}{
+  \if@english
+      \englishAbstract
+      \englishKeywords\\[4mm]
+      \portugueseAbstract
+      \portugueseKeywords
+    \else
+      \portugueseAbstract
+      \portugueseKeywords\\[4mm]
+      \englishAbstract
+      \englishKeywords
+  \fi
+}
+
+\newcommand{\definecommomfooter}{
+  \fancyfoot{} % Blank out the default footer
+  \fancyfoot[C]{{\color{cncolor}\rule{90mm}{1.5pt}}\\[-3pt]{
+    \fontsize{9pt}{0pt}\selectfont Ci. e Nat., Santa Maria, v.\volume, \eJournal, \yearonfooter}
+  }
+}
 
 \newcommand{\coverpage}{
 
   \clearheader
+
   \setupcoverpagefooter
 
   \cncoverheader
+  
   \cenSection
   
+  \centering
+
   \vspace{8mm}
   \titles
 
@@ -270,15 +276,20 @@
 
   \vspace{5mm}
   \abstract
+  
+  \ifnum\value{page}=1
+    \relax\clearpage
+  \else
+  \fi
 
-  \addextraspaceforcoverpage
-
-  \setupusualfooter
+  \definecommomfooter
 
   \setupusualheader
-  \setlength{\parskip}{12pt}
-  \setlength{\parindent}{36pt} 
-
+  
+  \normalsize
+  \setstretch{1.5}
+  \setlength{\parskip}{0pt}
+  \setlength{\parindent}{12.5mm} 
 }
 
 \makeatletter

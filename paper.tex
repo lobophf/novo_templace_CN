@@ -58,12 +58,12 @@
   \affiliation{II}{University of Oxford, UK}
 }
 
-\shortHeaderTitle{The title}
-\shortHeaderAuthors{Carberry{\it~et~al.}}
+\shortHeaderTitle{Interference of Lightning and Thunder on Radioactivity: A Novel Approach ...}
+\shortHeaderAuthors{Babbage{\it~et~al.}}
 %
 \portugueseAbstract{
 Este artigo de pesquisa apresenta os resultados de um experimento conduzido por uma equipe de cientistas multidisciplinares, com o objetivo de estudar a interferência de raios e trovões na radioatividade. 
-Ao utilizar o Eletroplumbos-nimbodetector, a equipe investigou as complexas interações entre raios, trovões e radioatividade, proporcionando insights fascinantes sobre esse fenômeno intrigante. 
+Ao utilizar o Eletroplumbus-nimbodetector, a equipe investigou as complexas interações entre raios, trovões e radioatividade, proporcionando insights fascinantes sobre esse fenômeno intrigante. 
 A equipe coletou dados precisos e quantitativos sobre a intensidade dos raios, a frequência dos trovões e os níveis de radioatividade durante tempestades. Essas informações foram analisadas por meio de algoritmo Foobar, permitindo a identificação de correlações e padrões. 
 Além disso, a equipe realizou medições comparativas em áreas livres de atividade elétrica, servindo como um grupo de controle para a comparação dos resultados. Essa abordagem meticulosa permitiu uma análise mais precisa dos efeitos específicos da interferência de raios e trovões na radioatividade. 
 Os resultados obtidos revelam um aumento significativo nos níveis de radioatividade durante a ocorrência de raios e trovões, indicando uma clara influência desses fenômenos atmosféricos. 
@@ -74,7 +74,7 @@ As implicações dessas descobertas são amplas e podem ter aplicações em dive
 \portugueseKeywords{raio, trovão, radioatividade, experimento aéreo, velocidade de escape, tempestade}
 %
 \englishAbstract{
-This research paper presents the results of an experiment conducted by a team of multidisciplinary scientists, aimed at studying the interference of lightning and thunder on radioactivity. By utilizing the Electroplumbos-nimbodetector, the team investigated the complex interactions between lightning, thunder, and radioactivity, providing fascinating insights into this intriguing phenomenon. 
+This research paper presents the results of an experiment conducted by a team of multidisciplinary scientists, aimed at studying the interference of lightning and thunder on radioactivity. By utilizing the Electroplumbus nimbodetector, the team investigated the complex interactions between lightning, thunder, and radioactivity, providing fascinating insights into this intriguing phenomenon. 
 The team collected accurate and quantitative data on the intensity of lightning, frequency of thunder, and levels of radioactivity during storms. This information was analyzed using the Foobar algorithm, allowing for the identification of correlations and patterns. 
 Additionally, the team conducted comparative measurements in areas free from electrical activity, serving as a control group for result comparison. This meticulous approach enabled a more precise analysis of the specific effects of lightning and thunder interference on radioactivity. 
 The obtained results reveal a significant increase in radioactivity levels during the occurrence of lightning and thunder, indicating a clear influence of these atmospheric phenomena. 
@@ -87,21 +87,29 @@ The implications of these findings are broad and can have applications in variou
 %----------------------------------------------------------------------------------------
 \begin{document}
   \coverpage
-
+%
 \section{Experimental Setup}
 \subsection{The 14 bis Flying Vehicle}
-    To conduct our experiment, we required a specialized flying vehicle capable of navigating stormy weather conditions. In this study, we employed the revolutionary 14 bis, an innovative flying vehicle designed specifically for this purpose. The 14 bis, a marvel of engineering ingenuity, exhibits exceptional maneuverability and stability, making it the ideal platform for our experiment.\citep{Clarke2014}
-
-\section{The Espiralocirros-nimbodetector}
-Mounted securely aboard the 14 bis, the Espiralocirros-nimbodetector, our novel instrument, played a pivotal role in this experiment. Designed to measure air humidity using spores of Syagrus romanzoffiana (coquinhos do mato), the Espiralocirros-nimbodetector collected crucial data throughout the flight. Its integration with the 14 bis allowed for precise measurements in close proximity to lightning and thunder events, enhancing our understanding of their impact on radioactivity.
-
+To conduct our experiment, we required a specialized flying vehicle capable of navigating stormy weather conditions. In this study, we employed the revolutionary 14 bis, an innovative flying vehicle designed specifically for this purpose. The 14 bis, a marvel of engineering ingenuity, exhibits exceptional maneuverability and stability, making it the ideal platform for our experiment.\citep{Clarke2014}\par
+%
+To conduct our experiment, we required a specialized flying vehicle capable of navigating stormy weather conditions. In this study, we employed the revolutionary 14 bis, an innovative flying vehicle designed specifically for this purpose. The 14 bis, a marvel of engineering ingenuity, exhibits exceptional maneuverability and stability, making it the ideal platform for our experiment.\citep{Clarke2014}\par
+%
+\section{The Electroplumbus nimbodetector}
+Mounted securely aboard the 14 bis, the Electroplumbos nimbodetector, our novel instrument, played a pivotal role in this experiment. Designed to measure air humidity using spores of Syagrus romanzoffiana (coquinhos do mato), the Electroplumbus nimbodetector collected crucial data throughout the flight. Its integration with the 14 bis allowed for precise measurements in close proximity to lightning and thunder events, enhancing our understanding of their impact on radioactivity.
+%
 \section{Flight Path and Data Collection}
-The 14 bis, piloted by skilled aviators, embarked on a carefully planned flight path to encounter stormy weather conditions. As the vehicle ascended, the Espiralocirros-nimbodetector started collecting air humidity data, capturing valuable information about the atmospheric conditions near lightning and thunder occurrences. The 14 bis maneuvered skillfully through turbulent air currents, ensuring accurate and reliable data collection throughout the flight duration.
-
+The 14 bis, piloted by skilled aviators, embarked on a carefully planned flight path to encounter stormy weather conditions. As the vehicle ascended, the Electroplumbus nimbodetector started collecting air humidity data, capturing valuable information about the atmospheric conditions near lightning and thunder occurrences. The 14 bis maneuvered skillfully through turbulent air currents, ensuring accurate and reliable data collection throughout the flight duration.
+%
 \section{Data Analysis and Results}
-The collected data, comprising air humidity measurements obtained by the Espiralocirros-nimbodetector aboard the 14 bis, underwent comprehensive analysis using advanced statistical techniques. By correlating the recorded air humidity levels with lightning and thunder events, we gained insights into the intricate relationships between atmospheric phenomena and radioactivity.
+The collected data, comprising air humidity measurements obtained by the Electroplumbus nimbodetector aboard the 14 bis, underwent comprehensive analysis using advanced statistical techniques. By correlating the recorded air humidity levels with lightning and thunder events, we gained insights into the intricate relationships between atmospheric phenomena and radioactivity.
 
 \pgfplotstableread{multiple_functions.dat}{\table}
+
+\pgfplotsset{
+  legend style = {font = \large}, % Adjust the font size and style as needed
+  tick label style = {font = \Large}, % Adjust the font size as needed
+  every axis label = {font = \Large}, % Adjust the font size as needed
+}
  
 \begin{center}
   \begin{tikzpicture}[scale=0.7][H]
@@ -115,9 +123,12 @@ The collected data, comprising air humidity measurements obtained by the Espiral
     major grid style = {lightgray},
     minor grid style = {lightgray!25},
     width = \textwidth,
-    height = 0.75\textwidth,
+    height = 0.6\textwidth,
     legend cell align = {left},
-    legend pos = north west
+    legend pos = north west,
+    tick label style = {font = \scriptsize}, % Adjust the font size as needed
+    every axis label = {font = \small}, % Adjust the font size as needed
+    legend style = {font = \small} % Adjust the font size and style as needed
 ]
  
 \addplot[blue, mark = *] table [x = {x}, y = {y1}] {\table};
@@ -131,8 +142,10 @@ The collected data, comprising air humidity measurements obtained by the Espiral
     Plot only with marks,
     Plot with other type of marks
 }
- 
+
+
 \end{axis}
+ 
  
 \end{tikzpicture}
 \end{center}
