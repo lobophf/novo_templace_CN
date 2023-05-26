@@ -1,4 +1,8 @@
-\documentclass[english]{cenarticle}
+% meia risca meio traço alt+0150
+% heat transfer rate through radiation
+% o core tem termometro do veículo que é separado. A luz aquece o sheeem (baixa capacidade termica) e é determinada a temperatura
+
+\documentclass[portuguese]{cenarticle}
 %----------------------------------------------------------------------------------------
 %	PUBLISH INFO (not for authors)
 %----------------------------------------------------------------------------------------
@@ -24,7 +28,6 @@
 %----------------------------------------------------------------------------------------
 %
 \usepackage{pgfplots}
-\usepackage{caption}
 \usepackage{graphicx}
 
 \usepackage{amsmath,amsthm,amssymb,amsfonts}
@@ -37,16 +40,6 @@
 %	YOUR CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 %
-\captionsetup{%
-  font=footnotesize,
-  labelfont=bf,
-  singlelinecheck=false,
-  tableposition=top,
-  labelsep=endash,
-  justification=raggedright,
-  margin={0pt,0pt}
-}
-
 \sisetup{math-micro=\text{µ},text-micro=µ}
 %
 %----------------------------------------------------------------------------------------
@@ -96,11 +89,11 @@ Este artigo de pesquisa apresenta os resultados de um experimento conduzido por 
 This research paper presents the results of an experiment conducted by a team of multidisciplinary scientists, aimed at studying the interference of lightning and thunder on radioactivity. By utilizing the Electroplumbus nimbodetector, the team investigated the complex interactions between lightning, and radioactivity, providing fascinating insights into this intriguing phenomenon. The team collected accurate and quantitative data on the intensity of lightning, and levels of radioactivity during storms. This information was analyzed using the Foobar algorithm, allowing for the identification of correlations and patterns. Additionally, the team conducted comparative measurements in areas free from electrical activity, serving as a control group for result comparison. This meticulous approach enabled a more precise analysis of the specific effects of lightning interference on radioactivity. The obtained results reveal a significant increase in radioactivity levels during the occurrence of lightning and thunder, indicating a clear influence of these atmospheric phenomena. This discovery challenges previous assumptions and contributes to the advancement of knowledge regarding the effects of electrical activity on radioactivity. The implications of these findings are broad and can have applications in various fields, including nuclear safety, environmental protection, and even storm prediction and its potential effects.
 }
 %
-\englishKeywords{lightning, radioactivity, airborne experiment, storm}
+\englishKeywords{Lightning; Radioactivity; Airborne experiment; Storm}
 %
 %----------------------------------------------------------------------------------------
 \begin{document}
-  \coverpage
+\coverpage
 %
 \section{Experimental Setup}
 \subsection{The 14-Bis flying vehicle}
@@ -152,8 +145,8 @@ The inclusion of two sensors in the setup serves a crucial purpose: calculating 
   \end{center}%
   \vspace{-1mm}
   {\footnotesize
-  Source: Craiyon website, see \citep{Craiyon}.\\
-  Caption: The (a) figure displays the core of the device with the Plumbus Combobulator inside and (b) shows the lightning detector filled by enriched Glowing Schleem substance.\\
+  Source: Craiyon website, see \citep{Craiyon}\\
+  Caption: The (a) figure displays the core of the device with the Plumbus Combobulator inside and (b) shows the lightning detector filled by enriched Glowing Schleem substance\\
   }
 	\label{fig:triangle2}
   \end{figure}\vspace{-9mm}
@@ -162,26 +155,24 @@ The inclusion of two sensors in the setup serves a crucial purpose: calculating 
 
 The data storage component of the Electroplumbus Nimbodetector is an essential element of its operational framework. This system employs a carefully engineered adaptation of the Plumbus Combobulator, which offers fault-tolerant characteristics and efficient data preservation.
 
-At the core of the data storage mechanism is the utilization of punched paper, designed to withstand various environmental conditions. This robust material ensures the durability and integrity of the captured lightning data, even during adverse weather conditions such as rainfall. The waterproof nature of the paper safeguards the data from moisture, allowing for uninterrupted data collection.
+At the core of the data storage mechanism is the utilization of punched tape, designed to withstand various environmental conditions. This robust material ensures the durability and integrity of the captured lightning data, even during adverse weather conditions such as rainfall. The waterproof nature of the tape safeguards the data from moisture, allowing for uninterrupted data collection.
 
-The adapted Plumbus Combobulator employs a $\SI{0.47}{\micro\meter}$ needle, precisely marking the punched paper as the lightning data is processed. This needle-based mechanism creates a distinct pattern that represents the collected information. With each stroke, a tangible record of the lightning data is imprinted onto the punched paper.
+The adapted Plumbus Combobulator employs a $\SI{0.47}{\micro\meter}$ needle, precisely marking the punched tape as the lightning data is processed. This needle-based mechanism creates a distinct pattern that represents the collected information. With each stroke, a tangible record of the lightning data is imprinted onto the punched tape.
 
-The paper-based storage medium enables efficient and reliable data preservation. Each $\SI{100}{\milli\meter}$ segment of the punched paper corresponds to a substantial $\SI{1.2E6}{\byte}$ of information. This capacity ensures ample storage space for capturing an extensive volume of lightning data during experiments.
+The tape-based storage medium enables efficient and reliable data preservation. Each $\SI{100}{\milli\meter}$ segment of the punched tape corresponds to a substantial $\SI{1.2E6}{\byte}$ of information. This capacity ensures ample storage space for capturing an extensive volume of lightning data during experiments.
 
 \section{Data Analysis}
 
-\subsection{The Branzine}
+\subsection{The Branzine levels}
 
-According to Plumbus Combobulator manufacturer \citep{PlumbusManual}, the Branzine levels can cause Electroplumbus Nimbodetector malfunctions. Because that a preliminary exploratory flight was undertaken to examine the influence of altitude on Branzine levels, considering both air samples collected with and without rainfall.
-
+According to the Plumbus Combobulator manufacturer's manual \citep{PlumbusManual}, high levels of Branzine can potentially lead to malfunctions in the Electroplumbus Nimbodetector. Therefore, a preliminary exploratory flight was conducted to investigate the relationship between altitude and Branzine levels. 
 During the flight, air samples were gathered at various altitudes to measure the concentration of Branzine, by using the Branzine detector\footnote{Digital Bz897U, available on $^{\circledR}$Airbone Laboratory Instrument Inc.}. The samples were divided into two groups: those collected during rainfall and those obtained under dry conditions. This differentiation aimed to explore any potential impact of precipitation on Branzine levels.
 
-
-The collected data was send to the laboratory, and the results are summarized in the table below:
+The  data was sent to the laboratory, and the results are bellow summarized:
 
 \begin{table}[!h]
 \caption{Branzine levels}
-\vspace{-6mm}
+\vspace{-5mm}
 \footnotesize
 \begin{center}
   \begin{tabular}{@{}lccc@{}}
@@ -191,7 +182,7 @@ The collected data was send to the laboratory, and the results are summarized in
   \multirow{8}{*}{\rotatebox[origin=c]{90}{under the clouds} } 
                                          & $100 \pm 1$      & $0.005 \pm 0.001$   &     $0.006 \pm 0.001$  \\
                                          & $200 \pm 1$      & $1.265 \pm 0.001$   &     $1.260 \pm 0.001$  \\
-                                         & $500 \pm 1$      & $40.1  \pm 0.01$    &      $40.2 \pm 0.01$   \\
+                                         & $500 \pm 1$      & $40.1  \pm 0.1$    &      $40.2 \pm 0.1$   \\
                                          & $1000\pm 1$      & $392   \pm 5$       &      $395  \pm 5$      \\
                                          & $2000\pm 1$      & $609   \pm 5$       &      $607  \pm 5$      \\
                                          & $3000\pm 1$      & $2709  \pm 10$      &     $2701  \pm 10$     \\
@@ -209,9 +200,50 @@ The collected data was send to the laboratory, and the results are summarized in
 \end{center}
 Caption: The Branzine levels in relation to altitude, over the Atlantic Ocean (August, 1987).\\
 \end{table}
+\vspace{-6mm}
+Upon analyzing the data, it was observed that there is a increase in Branzine levels with increasing altitude. However, the rise remained below $0.2\%$, indicating an insignificant effect on the Plumbus performance. These findings align with prior research \citep{Gagaia1923}, which suggests that Branzine levels typically exhibit a notable increase of over $5\%$ in some conditions such as winter seasons or above the Bermuda's Triangle ($32\%$).
 
-Upon analyzing the data, it was observed that there is a increase in Branzine levels with increasing altitude. However, the rise remained below $0.2\%$, indicating an insignificant effect on the Plumbus performance. These findings align with prior research \citep{Gagaia1923}, which suggests that Branzine levels typically exhibit a notable increase of over $5\%$ in specific regions such as winter sections or the Bermuda Triangle ($32\%$).
-\vfill
+\subsection{The radiation levels}
+
+Despite the influence of Branzine on the detector, it has been determined that the Electroplumbus Nimbodetector is safe to use under the tested conditions. The Electroplumbus Nimbodetector was successfully installed on the 14-bis flying vehicle, and a series of tests were conducted at altitudes ranging from $\SI{100}{\meter}$ to $\SI{6000}{\meter}$.
+
+The evaluation began by examining the performance of the Nimbus Detector under heavy rain conditions, comparing the recorded data to measurements obtained in a rainless environment above the clouds. A total of $\SI{12}{\meter}$ of data were collected and recorded on punched tape, with $\SI{30}{\centi\meter}$ obtained in the absence of rain and the remaining length obtained during rainfall.
+
+After the evaluation, the collected data in the form of punched tape was sent for analysis. The punched tape contained the recorded information obtained by the Nimbus Detector during the data collection. To process and analyze the data, the Monrobot XI computer was used, employing the Foobar Algorithm programmed in FORTRAN.
+
+\begin{equation}\label{StefanBoltzmannLaw}
+  j^{\star}=\sigma\varepsilon T^{4}
+\end{equation}
+%
+\noindent where,
+%
+\begin{equation}\label{StefanBoltzmannConstant }
+  \sigma=5.6704\times10^{-8} Wm^{-2}K^{-4}
+\end{equation}
+
+\begin{equation}
+  j^{\star}=\sigma\varepsilon T^{4}
+\end{equation}
+
+
+\begin{equation}\label{StefanBoltzmannLaw}
+  \begin{split}
+    \frac{P}{A}&=j^{\star}=\sigma\varepsilon (T_{v}^{4} - T_{a}^{4}) \\
+  \end{split}
+\end{equation}
+
+\noindent where,
+
+\begin{equation}\label{StefanBoltzmannLaw}
+  \begin{split}
+    P = \frac{Q}{t}
+  \end{split}
+\end{equation}
+
+
+
+
+
 
 \pgfplotstableread{multiple_functions.dat}{\table}
 
@@ -259,6 +291,10 @@ Upon analyzing the data, it was observed that there is a increase in Branzine le
  
 \end{tikzpicture}
 \end{center}
+
+The chart presents the number of lightning strikes detected by the Nimbus Detector within different altitude ranges. As altitude increased, the number of recorded lightning strikes also exhibited an upward trend.
+
+
 
 \bibliography{references}
   

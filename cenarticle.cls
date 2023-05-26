@@ -53,6 +53,8 @@
 \RequirePackage{setspace}
 \RequirePackage{titlesec}
 
+\RequirePackage{caption}
+
 %
 %----------------------------------------------------------------------------------------
 %	TEMPLATE CONFIGURATIONS (not for authors)
@@ -175,11 +177,11 @@
 }
 %
 \newcommand{\englishKeywords}[1]{\def\englishKeywords{
-  \makekeywords{keywords}{#1}
+  \makekeywords{Keywords}{#1}
 }}
 %
 \newcommand{\portugueseKeywords}[1]{\def\portugueseKeywords{
-  \makekeywords{palavras-chave}{#1}
+  \makekeywords{Palavras-chave}{#1}
 }}
 %
 \newcommand{\shortHeaderTitle}[1]{\def\shortHeaderTitle{#1}}
@@ -210,8 +212,8 @@
 \newcommand{\setupusualheader}{
   \fancyhead{}
   \renewcommand\headrule{\vspace{-1mm}\noindent\makebox[\linewidth]{\color{cncolor}\rule{\linewidth}{1.5pt}}}
-  \fancyhead[EL]{\thepage~~\textbar{}~\shortHeaderTitle} % 
-  \fancyhead[OR]{\shortHeaderAuthors~\textbar{}~~\thepage} % 
+  \fancyhead[EL]{\footnotesize \thepage~~\textbar{}~\shortHeaderTitle} % 
+  \fancyhead[OR]{\footnotesize \shortHeaderAuthors~\textbar{}~~\thepage} % 
   \fancyhead[ER]{} %
   \fancyhead[OL]{} % 
 }
@@ -291,6 +293,17 @@
   \setlength{\parskip}{0pt}
   \setlength{\parindent}{12.5mm} 
 }
+
+\captionsetup{%
+  font=footnotesize,
+  labelfont=bf,
+  singlelinecheck=false,
+  tableposition=top,
+  labelsep=endash,
+  justification=raggedright,
+  margin={0pt,0pt}
+}
+
 
 \makeatletter
 \renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{3mm}}
