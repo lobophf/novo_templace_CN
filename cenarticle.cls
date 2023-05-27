@@ -296,7 +296,7 @@
 
 \captionsetup{%
   font=footnotesize,
-  labelfont=bf,
+  labelfont=normalfont,
   singlelinecheck=false,
   tableposition=top,
   labelsep=endash,
@@ -304,9 +304,6 @@
   margin={0pt,0pt}
 }
 
-
 \makeatletter
 \renewcommand*{\@seccntformat}[1]{\csname the#1\endcsname\hspace{3mm}}
 \makeatother
-
-
