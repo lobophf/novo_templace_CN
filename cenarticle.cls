@@ -68,7 +68,7 @@
 \titlespacing*{\section}{0pt}{9mm}{3mm}
 \titleformat*{\section}{\fontsize{14pt}{0pt}\bfseries}
 
-\titlespacing*{\subsection}{0pt}{0mm}{3mm}
+\titlespacing*{\subsection}{0pt}{3mm}{3mm}
 \titleformat*{\subsection}{\normalsize\bfseries}
 %
 %----------------------------------------------------------------------------------------
