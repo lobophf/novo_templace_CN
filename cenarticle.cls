@@ -54,7 +54,6 @@
 \RequirePackage{titlesec}
 
 \RequirePackage{caption}
-
 %
 %----------------------------------------------------------------------------------------
 %	TEMPLATE CONFIGURATIONS (not for authors)
