@@ -256,7 +256,7 @@
   \newcommand{\howtocite}{
     \vspace{-10mm}
     \if@english%
-      \section*{How to quote this article}%
+      \section*{How to cite this article}%
     \else%
       \section*{Como citar este artigo}%
     \fi%
@@ -265,6 +265,10 @@
   }
 
   \newcommand{\coverpage}{
+    \tolerance=1
+    \emergencystretch=\maxdimen
+    \hyphenpenalty=10000
+    \hbadness=10000
 
     \clearheader
 
@@ -301,11 +305,6 @@
     \setstretch{1.5}
     \setlength{\parskip}{0pt}
     \setlength{\parindent}{12.5mm} 
-
-    \tolerance=1
-    \emergencystretch=\maxdimen
-    \hyphenpenalty=10000
-    \hbadness=10000
   }
 
   \newcounter{authorscounter}
