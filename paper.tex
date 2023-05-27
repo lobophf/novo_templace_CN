@@ -1,7 +1,3 @@
-% meia risca meio traço alt+0150
-% heat transfer rate through radiation
-% o core tem termometro do veículo que é separado. A luz aquece o sheeem (baixa capacidade termica) e é determinada a temperatura
-
 \documentclass[english]{cenarticle}
 %----------------------------------------------------------------------------------------
 %	PUBLISH INFO (not for authors)
@@ -35,19 +31,45 @@
 
 \usepackage{booktabs}
 \usepackage{multirow}
+
+\usepackage{listings}
 %
 %----------------------------------------------------------------------------------------
 %	YOUR CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 %
 \sisetup{math-micro=\text{µ},text-micro=µ}
-
+%
+\lstset{language=Fortran,
+    basicstyle=\footnotesize\ttfamily,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\itshape,
+    stringstyle=\itshape\color{magenta},
+    numbers=left,
+    numberstyle=\color{gray}\footnotesize\ttfamily,
+    numbersep=9pt,
+    showspaces=false,
+    showstringspaces=false,
+    breaklines=true,
+    tabsize=4,
+    frame=leftline,
+    framerule=1pt,
+    rulecolor=\color{cncolor},
+    morekeywords={program, end, subroutine, end subroutine, if, then, else, endif, do, enddo, real, integer, logical, dimension, allocatable, intent, call}
+}
 %
 %----------------------------------------------------------------------------------------
 %	YOUR NEW COMMANDS
 %----------------------------------------------------------------------------------------
 %
-\renewcommand{\thefigure}{\arabic{figure}}
+\newcommand{\citeauthoryearpage}[2]{
+  (\citeauthor{#1}, \citeyear{#1}, p. #2)
+}
+%
+\newcommand{\citeapud}[3]{
+  (\citeauthor{#1} {\it apud} \citeauthor{#2}, \citeyear{#2}, p. #3)
+}
+
 %----------------------------------------------------------------------------------------
 %	PAPER INFO (for authors)
 %----------------------------------------------------------------------------------------
@@ -101,19 +123,15 @@ Lightning, a powerful natural phenomenon, not only captivates our curiosity but 
 %
 Lightning, a powerful natural phenomenon, has long fascinated scientists and researchers due to its immense energy and unpredictable behavior. The study of lightning and its effects on the surrounding environment is crucial for gaining a deeper understanding of atmospheric dynamics and improving safety measures against its potential hazards. In particular, the transfer of thermal radiation during lightning strikes plays a significant role in shaping the thermal characteristics of the atmosphere and has far-reaching implications for meteorology, climate science, and environmental studies.\par
 %
+\longquotation{Two difficulties are encountered in studying radiation within absorbing, emitting, and scattering media that make these studies, to say the least, challenging. First, absorption and emission of energy are occurring not only at system boundaries, but at every local point within the medium [...]. A second difficulty is that spectral effects are often much more pronounced in gases than for solid surfaces. \citeauthoryearpage{Siegel1968}{2}}
+%
 To investigate the dynamics of lightning and its thermal effects, advanced experimental apparatus and specialized devices are required. In this paper, we present the results of a comprehensive study conducted using the 14-Bis flying vehicle and the Electroplumbus Nimbodetector, designed specifically for data collection within lightning storms. These innovative instruments enable researchers to gather valuable insights into the intricate processes associated with lightning discharges and the resulting thermal phenomena.\par
 %
 In the following sections, we present the experimental setup, data collection methods, and data analysis techniques employed in this study. Subsequently, we discuss the results obtained, highlighting the correlation between lightning strikes and the transfer of thermal radiation. Finally, we conclude with a summary of the findings, their significance, and future research directions.\par
 %
 \section{Experimental Setup}
 \subsection{The 14-Bis flying vehicle}
-The 14-Bis flying vehicle, an innovative experimental apparatus, features an open cockpit design that offers an unobstructed view for the driver during ascents into the skies to collect data within lightning storms. The vehicle is equipped with a two clicle kerosene fueled motor \citep{Torrens1992} that drives a large propeller, providing efficient propulsion for navigating through turbulent atmospheric conditions.\par
-%
-Its streamlined shape is optimized for aerodynamic efficiency, minimizing drag and turbulence to facilitate smooth movement through the air. The veicle incorporates pairs of rigid horizontal structures projecting from both sides, designed to provide stability and support during flight \citep{Wipo}, enabling the driver to maintain control even in the presence of strong winds and atmospheric disturbances.\par
-%
-Within the open cockpit, the driver securely straps into a harness, ready to embark on their mission into lightning storms. The propulsion system powered by the kerosene motor generates the necessary thrust for controlled ascent \citep{Torrens1992}, while the open design ensures an immersive experience for the driver, allowing them to observe and collect data in real-time.\par
-%
-With its purpose-driven design and reliable motor, the 14-Bis flying vehicle represents an instrumental tool for conducting data collection within lightning storms. The combination of an open cockpit, sturdy structural elements, and efficient propulsion system allows for precise maneuverability and enables researchers to gather valuable insights into the dynamics of these atmospheric phenomena.
+The 14-Bis flying vehicle, an innovative experimental apparatus, features an open cockpit design that offers an unobstructed view for the driver during ascents into the skies to collect data within lightning storms. The vehicle is equipped with a two clicle kerosene fueled motor \citep{Torrens1992} that drives a large propeller, providing efficient propulsion for navigating through turbulent atmospheric conditions \citeapud{Pimenta1987}{Torrens1992}{46}.
 %
 \begin{figure}[!h]
   \caption{The 14-bis flying vehicle}
@@ -122,11 +140,17 @@ With its purpose-driven design and reliable motor, the 14-Bis flying vehicle rep
     \includegraphics[width=0.55\textwidth, trim={0 0 0 0},clip]{images/14-bis.jpeg}
   \end{center}
   {\footnotesize
-  Source: Biblioteca Digital Gallica, id btv1b8433366m, Public Domain, availiable on \citep{Beau1907}.\\
-  Caption: The 14-bis in its final form, with octagonal-planform interplane ailerons.}
+  Source: Biblioteca Digital Gallica, id btv1b8433366m, Public Domain, availiable on \citep{Beau1907}\\
+  Caption: The 14-bis in its final form, with octagonal-planform interplane ailerons}
     \label{fig:triangle2}
-  \end{figure}
-
+\end{figure}
+%
+Its streamlined shape is optimized for aerodynamic efficiency, minimizing drag and turbulence to facilitate smooth movement through the air. The veicle incorporates pairs of rigid horizontal structures projecting from both sides, designed to provide stability and support during flight \citep{Wipo}, enabling the driver to maintain control even in the presence of strong winds and atmospheric disturbances.\par
+%
+Within the open cockpit, the driver securely straps into a harness, ready to embark on their mission into lightning storms. The propulsion system powered by the kerosene motor generates the necessary thrust for controlled ascent \citep{Torrens1992}, while the open design ensures an immersive experience for the driver, allowing them to observe and collect data in real-time.\par
+%
+With its purpose-driven design and reliable motor, the 14-Bis flying vehicle represents an instrumental tool for conducting data collection within lightning storms. The combination of an open cockpit, sturdy structural elements, and efficient propulsion system allows for precise maneuverability and enables researchers to gather valuable insights into the dynamics of these atmospheric phenomena.
+%
   \subsection{Electroplumbus Nimbodetector}
 
   The 4th generation Electroplumbus Nimbodetector is a specialized device designed to collect data from a sensor and measure thermal radiation during lightning strikes. The device incorporates a modified version of the Plumbus Combobulator in its core, along with a specially engineered sensor that has a prism shape and is filled with an enriched Glowing Schleem substance. The purpose of the device is to gather data on lightning discharges and study their effects on the surrounding air.\par
@@ -159,7 +183,7 @@ With its purpose-driven design and reliable motor, the 14-Bis flying vehicle rep
     Caption: The (a) figure displays the core of the device with the Plumbus Combobulator inside and (b) shows the lightning detector filled by enriched Glowing Schleem substance\\
     }
     \label{fig:triangle2}
-    \end{figure}\vspace{-4mm}
+    \end{figure}\vspace{-10mm}
   %
   \subsection{Data Collection}
 
@@ -237,7 +261,7 @@ To calculate the heat transfer rate by radiation (almost entire in the infrared 
 %
 Here, $Q \slash t$ represents the radiationheat transfer rate, taking into account the emissivity of the sensor $\varepsilon$ . The emissivity is a dimensionless quantity that varies between $0$ and $1$, where $0$ represents a perfectly reflective surface (no radiation emitted) and $1$ represents a perfectly black body (maximum radiation emitted). In this case, the manufacturer's manual establishes the value $\varepsilon = 0.998$. Also, $A$ is the surface sensor's area ($A=\SI{128.34}{\milli\meter^2}$).
 
-\section{Results}
+\section{Results and Discussion}
 
 The analysis of data collected by the Electroplumbus Nimbodetector reveals a significant correlation between the intensity of lightning strikes and the transfer of thermal radiation. Through a series of field experiments and measurements, we observed a consistent increase in the energy transferred by radiation during lightning events.
 
@@ -288,25 +312,29 @@ The analysis of data collected by the Electroplumbus Nimbodetector reveals a sig
 \end{tikzpicture}
 \end{center}
 
-The chart presents the number of lightning strikes detected by the Nimbus Detector within different altitude ranges. As altitude increased, the number of recorded lightning strikes also exhibited an upward trend.
-
-The chart presented in Figure 1 illustrates the relationship between the intensity of lightning strikes and the corresponding heat transfer rate by radiation. As the intensity of the lightning strike increases, there is a clear upward trend in the energy transferred. This observation supports the hypothesis that lightning strikes contribute to an enhanced transfer of thermal radiation to the surrounding air.
-
-The strong correlation observed between lightning strikes and the energy transferred by radiation reinforces the reliability of the data collected by the Electroplumbus Nimbodetector. These findings provide valuable insights into the thermal dynamics associated with lightning discharges and contribute to a better understanding of the effects of lightning on the surrounding environment.
-
-Moreover, it is important to note that light alone cannot directly heat gas molecules. Instead, during a lightning strike, the light emitted excites the electrons in atoms within the detector. These atoms are already vibrating at a certain frequency. Some of these atoms vibrate with sufficient vigor that their vibrational energy matches the electronic energy (photons) absorbed from the lightning, effectively reaching resonance with the solar energy. As a result, these atoms undergo a quantum transition from being "electronically excited" to "vibrationally excited," causing the entire atom to move. The surrounding air perceives this excited vibration as "heat."
-
-This mechanism provides a deeper understanding of how the energy from a lightning strike is converted into thermal energy in the air. By studying the vibrational and electronic transitions occurring within the atoms of the detector, we can further elucidate the intricate processes involved in the thermal effects of lightning discharges.
-
+The chart presents the number of lightning strikes detected by the Nimbus Detector within different altitude ranges. As altitude increased, the number of recorded lightning strikes also exhibited an upward trend.\par
+%
+The chart presented in Figure 1 illustrates the relationship between the intensity of lightning strikes and the corresponding heat transfer rate by radiation. As the intensity of the lightning strike increases, there is a clear upward trend in the energy transferred. This observation supports the hypothesis that lightning strikes contribute to an enhanced transfer of thermal radiation to the surrounding air.\par
+%
+The strong correlation observed between lightning strikes and the energy transferred by radiation reinforces the reliability of the data collected by the Electroplumbus Nimbodetector. These findings provide valuable insights into the thermal dynamics associated with lightning discharges and contribute to a better understanding of the effects of lightning on the surrounding environment.\par
+%
+Moreover, it is important to note that light alone cannot directly heat gas molecules. Instead, during a lightning strike, the light emitted excites the electrons in atoms within the detector. These atoms are already vibrating at a certain frequency. Some of these atoms vibrate with sufficient vigor that their vibrational energy matches the electronic energy (photons) absorbed from the lightning, effectively reaching resonance with the solar energy. As a result, these atoms undergo a quantum transition from being "electronically excited" to "vibrationally excited," causing the entire atom to move. The surrounding air perceives this excited vibration as "heat."\par
+%
+This mechanism provides a deeper understanding of how the energy from a lightning strike is converted into thermal energy in the air. By studying the vibrational and electronic transitions occurring within the atoms of the detector, we can further elucidate the intricate processes involved in the thermal effects of lightning discharges.\par
+%
 In conclusion, this study demonstrates a strong correlation between the intensity of lightning strikes and the transfer of thermal radiation. The data collected by the Electroplumbus Nimbodetector, along with the presented chart, provides robust evidence supporting this relationship. Additionally, the exploration of the underlying processes involving electronic and vibrational transitions within the detector atoms enhances our comprehension of how lightning energy is converted into heat in the surrounding air. These findings contribute to the scientific understanding of lightning-induced thermal phenomena and lay the foundation for future research in this field.
 
+\section*{Acknowledgements}
 
+We gratefully acknowledge the Lupus Institute for their financial support, which has made this work possible. Also, we want to express our sincere appreciation to the open.ai for its invaluable assistance in the development of this fictional scientific paper.
 
 \bibliography{references}
-  
-  {\setlength{\parindent}{0pt}
-    \input{authorshipAndContributions.tex}
-  }
 
+\theauthorcontributions
+
+\howtocite
+
+\section*{Appendix}
+\lstinputlisting[caption=Foobar program, label={lst:listing-f90}, language=Fortran]{foobar.f90}
 
 \end{document}

@@ -99,7 +99,6 @@
 \newcommand{\submitionDate}[1]{\def\submitionDate{#1}}
 \newcommand{\approvalDate}[1]{\def\approvalDate{#1}}
 \newcommand{\publishDate}[1]{\def\publishDate{#1}}
-\newcommand{\custombullet}{\raisebox{1.3pt}{\tiny\textbullet}}
 %
 \newcommand{\cncoverheader}{
  \noindent\begin{tikzpicture}[overlay]
@@ -110,10 +109,10 @@
       \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 6mm) {\fontsize{8pt}{2pt}\selectfont ISSN \issn};
       \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 1.5mm) {\includegraphics[height=4.5mm]{\openacessfile}};
 
-      \draw[line width=1.5pt, cncolor] (-20mm, -1.5mm) -- (\paperwidth, -1.5mm);
+      \draw[line width=1.0pt, cncolor] (-20mm, -1.5mm) -- (\paperwidth, -1.5mm);
       \draw node[anchor=north, inner sep=2.5mm] at (\textwidth / 2, 0) {\fontsize{8pt}{2pt}\selectfont  Ci. e Nat., Santa Maria, v. \volume, \eJournal, 2022 \textbullet~\doi};
       \node[anchor=north, inner sep=2mm, yshift=-4.5mm] at (\textwidth / 2, 0) {\fontsize{8pt}{2pt}\selectfont \submittedtext: \submitionDate~\textbullet~\approvedtext: \approvalDate~\textbullet~\publishedtext: \publishDate};
-      \draw[line width=1.5pt, cncolor] (-20mm, -10.0mm) -- (\paperwidth, -10mm);
+      \draw[line width=1.0pt, cncolor] (-20mm, -10.0mm) -- (\paperwidth, -10mm);
     \end{scope}
   \end{tikzpicture}
   \vspace{15.5mm}
@@ -143,7 +142,7 @@
 \newcommand{\orcid}[1]{\href{https://orcid.org/#1}{\textcolor[HTML]{A6CE39}{\faOrcid}}}
 
 \newcommand{\authorinfo}[3][]{%
-  \fontsize{12pt}{0pt}
+  \normalsize
   \mbox{
     {\hspace{-3pt}\bf#2}% 
     {\ifthenelse{\equal{#3}{}}{}{\textsuperscript{~\bf#3}}}%
@@ -151,14 +150,13 @@
   }%
 }
 
-\newcommand{\affil}[1]{\def\affil{\par\fontsize{10pt}{0pt}\selectfont#1}}
-\newcommand{\affiliation}[2]{\textsuperscript{\fontsize{10pt}{0pt}\selectfont#1}#2\par}
-
+\newcommand{\affil}[1]{\def\affil{\par\footnotesize\selectfont#1}}
+\newcommand{\affiliation}[2]{\textsuperscript{\footnotesize\selectfont#1}#2\par}
 
 \newcommand{\makeabstract}[2]{
   \noindent\flushleft\setstretch{1.0}
   {\normalsize\textbf{#1}}\\[0pt]
-  {\color{cncolor}\rule{\textwidth / 2}{1.5pt}}\\[3pt]
+  {\color{cncolor}\rule{\textwidth / 2}{1.0pt}}\\[3pt]
   \footnotesize\selectfont\setstretch{1.3}
   \nobreak\noindent\ignorespaces\justifying#2
 }
@@ -194,108 +192,164 @@
 \fi
 
 \newcommand{\setupcoverpagefooter}{
-  \setlength{\footskip}{27.00809pt}
-  \enlargethispage{-5mm}
-  \fancyfoot{} % Blank out the default footer
+    \setlength{\footskip}{27.00809pt}
+    \enlargethispage{-5mm}
+    \fancyfoot{} % Blank out the default footer
 
-  \fancyfoot[L]{
-    \noindent\begin{tikzpicture}[overlay]
-      \begin{scope}[shift={(0,7mm)}]
-        \draw[line width=1.5pt, cncolor] (0, 0) -- (\textwidth, 0);
-        \node[anchor=north west,inner sep=0mm] at (0, -1.5mm) {\includegraphics[width=17.4mm]{images/creativecommons.png}};
-        \node[anchor=west, inner sep=0mm] at (20mm, -4.8mm) {\scriptsize\selectfont \creativecommonstext};
-      \end{scope}
-    \end{tikzpicture}
+    \fancyfoot[L]{
+      \noindent\begin{tikzpicture}[overlay]
+        \begin{scope}[shift={(0,7mm)}]
+          \draw[line width=1.0pt, cncolor] (0, 0) -- (\textwidth, 0);
+          \node[anchor=north west,inner sep=0mm] at (0, -1.5mm) {\includegraphics[width=17.4mm]{images/creativecommons.png}};
+          \node[anchor=west, inner sep=0mm] at (20mm, -4.8mm) {\scriptsize\selectfont \creativecommonstext};
+        \end{scope}
+      \end{tikzpicture}
+    }
   }
-}
 
-\newcommand{\setupusualheader}{
-  \fancyhead{}
-  \renewcommand\headrule{\vspace{-1mm}\noindent\makebox[\linewidth]{\color{cncolor}\rule{\linewidth}{1.5pt}}}
-  \fancyhead[EL]{\footnotesize \thepage~~\textbar{}~\shortHeaderTitle} % 
-  \fancyhead[OR]{\footnotesize \shortHeaderAuthors~\textbar{}~~\thepage} % 
-  \fancyhead[ER]{} %
-  \fancyhead[OL]{} % 
-}
+  \newcommand{\setupusualheader}{
+    \fancyhead{}
+    \renewcommand\headrule{\vspace{-1mm}\noindent\makebox[\linewidth]{\color{cncolor}\rule{\linewidth}{1.0pt}}}
+    \fancyhead[EL]{\footnotesize \thepage~~\textbar{}~\shortHeaderTitle} % 
+    \fancyhead[OR]{\footnotesize \shortHeaderAuthors~\textbar{}~~\thepage} % 
+    \fancyhead[ER]{} %
+    \fancyhead[OL]{} % 
+  }
 
-\newcommand{\clearheader}{
-  \renewcommand{\headrulewidth}{0pt}
-  \fancyhead{} % Blank out the default header
-}
+  \newcommand{\clearheader}{
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyhead{} % Blank out the default header
+  }
 
-\newcommand{\titles}{
-  \centering
+  \newcommand{\titles}{
+    \centering
+      \if@english
+        {\fontsize{16pt}{0pt}\selectfont\bf\englishTitle}\\[5mm]
+        {\fontsize{14pt}{0pt}\portugueseTitle}
+      \else
+        {\fontsize{16pt}{0pt}\selectfont\bf\portugueseTitle}\\[5mm]
+        {\fontsize{14pt}{0pt}\englishTitle}
+      \fi  
+  }
+
+  \renewcommand{\abstract}{
     \if@english
-      {\fontsize{16pt}{0pt}\selectfont\bf\englishTitle}\\[5mm]
-      {\fontsize{14pt}{0pt}\portugueseTitle}
-    \else
-      {\fontsize{16pt}{0pt}\selectfont\bf\portugueseTitle}\\[5mm]
-      {\fontsize{14pt}{0pt}\englishTitle}
-    \fi  
-}
-
-\renewcommand{\abstract}{
-  \if@english
-      \englishAbstract
-      \englishKeywords\\[4mm]
-      \portugueseAbstract
-      \portugueseKeywords
-    \else
-      \portugueseAbstract
-      \portugueseKeywords\\[4mm]
-      \englishAbstract
-      \englishKeywords
-  \fi
-}
-
-\newcommand{\definecommomfooter}{
-  \fancyfoot{} % Blank out the default footer
-  \fancyfoot[C]{{\color{cncolor}\rule{90mm}{1.5pt}}\\[-3pt]{
-    \fontsize{9pt}{0pt}\selectfont Ci. e Nat., Santa Maria, v.\volume, \eJournal, \yearonfooter}
+        \englishAbstract
+        \englishKeywords\\[4mm]
+        \portugueseAbstract
+        \portugueseKeywords
+      \else
+        \portugueseAbstract
+        \portugueseKeywords\\[4mm]
+        \englishAbstract
+        \englishKeywords
+    \fi
   }
+
+  \newcommand{\definecommomfooter}{
+    \fancyfoot{} % Blank out the default footer
+    \fancyfoot[C]{{\color{cncolor}\rule{90mm}{1.0pt}}\\[-3pt]{
+      \fontsize{9pt}{0pt}\selectfont Ci. e Nat., Santa Maria, v.\volume, \eJournal, \yearonfooter}
+    }
+  }
+
+  \newcommand{\howtocite}{
+    \vspace{-10mm}
+    \if@english%
+      \section*{How to quote this article}%
+    \else%
+      \section*{Como citar este artigo}%
+    \fi%
+    \noindent\shortHeaderAuthors~
+    \if@english\englishTitle\else\portugueseTitle\fi. Ciência e Natura, Santa Maria, v. 44, \yearonfooter. DOI: \doi.
+  }
+
+  \newcommand{\coverpage}{
+
+    \clearheader
+
+    \setupcoverpagefooter
+
+    \cncoverheader
+    
+    \cenSection
+    
+    \centering
+
+    \vspace{8mm}
+    \titles
+
+    \vspace{7mm}
+    \theauthor
+
+    \vspace{4mm}
+    \affil
+
+    \vspace{5mm}
+    \abstract
+    
+    \ifnum\value{page}=1
+      \relax\clearpage
+    \else
+    \fi
+
+    \definecommomfooter
+
+    \setupusualheader
+    
+    \normalsize
+    \setstretch{1.5}
+    \setlength{\parskip}{0pt}
+    \setlength{\parindent}{12.5mm} 
+
+    \tolerance=1
+    \emergencystretch=\maxdimen
+    \hyphenpenalty=10000
+    \hbadness=10000
+  }
+
+  \newcounter{authorscounter}
+  \setcounter{authorscounter}{1}
+
+  \newcommand{\authorrules}[5]{
+    {\setlength{\parindent}{0pt}
+      {\bf\theauthorscounter~--~#1}\\
+      {\fontsize{11pt}{0pt}
+      #2\\
+      {\ifthenelse{\equal{#3}{}}{}{#3 \textbullet}}~#4\\
+    \if@english
+      Contribution: #5
+    \else
+      Contribuição: #5
+    \fi  
+    }\\[3mm]
+  }
+  \stepcounter{authorscounter}
 }
 
-\newcommand{\coverpage}{
-
-  \clearheader
-
-  \setupcoverpagefooter
-
-  \cncoverheader
-  
-  \cenSection
-  
-  \centering
-
-  \vspace{8mm}
-  \titles
-
-  \vspace{7mm}
-  \theauthor
-
-  \vspace{4mm}
-  \affil
-
-  \vspace{5mm}
-  \abstract
-  
-  \ifnum\value{page}=1
-    \relax\clearpage
+\newcommand{\theauthorcontributions}{
+  \vspace{-2mm}
+  \if@english
+    \section*{Author contributions}
   \else
-  \fi
+    \section*{Contribuições dos autores}
+  \fi  
+  \input{authorshipAndContributions.tex}
+}
 
-  \definecommomfooter
+\renewcommand{\thefigure}{\arabic{figure}}
 
-  \setupusualheader
-  
-  \normalsize
-  \setstretch{1.5}
-  \setlength{\parskip}{0pt}
-  \setlength{\parindent}{12.5mm} 
+\newcommand{\longquotation}[1]{
+  {\raggedleft\setstretch{1.0}
+  \vspace{3mm}
+  \begin{minipage}[b]{\linewidth-40mm}
+    \footnotesize#1
+  \end{minipage}\\[4mm]
+  }
 }
 
 \captionsetup{%
-  font=footnotesize,
+  font=normalsize,
   labelfont=normalfont,
   singlelinecheck=false,
   tableposition=top,
