@@ -339,7 +339,7 @@
 
 \newcommand{\longquotation}[1]{
   {\raggedleft\setstretch{1.0}
-  \vspace{3mm}
+  \vspace{5mm}
   \begin{minipage}[b]{\linewidth-40mm}
     \footnotesize#1
   \end{minipage}\\[4mm]
