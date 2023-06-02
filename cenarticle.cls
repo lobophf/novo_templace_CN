@@ -55,10 +55,6 @@
 
 \RequirePackage{caption}
 %
-%----------------------------------------------------------------------------------------
-%	TEMPLATE CONFIGURATIONS (not for authors)
-%----------------------------------------------------------------------------------------
-%
 \pagestyle{fancy} % All pages have headers and footers
 \setlength{\headheight}{10mm}
 \setlength{\headsep}{5mm} 
@@ -79,7 +75,7 @@
 \else
   \def\openacessfile{images/acesso-aberto.png}
 \fi
-
+%
 \if@portuguese
   \def\submittedtext{Submissão}
   \def\approvedtext{Aprovação}
@@ -90,6 +86,10 @@
   \def\publishedtext{Published}
 \fi
 %
+\def\extraspace{0mm}
+\newcommand{\addextraspaceoncoverpage}[1]{
+  \def\extraspace{#1}
+}
 %
 \newcommand{\issn}[1]{\def\issn{#1}}
 \newcommand{\volume}[1]{\def\volume{#1}}
@@ -235,11 +235,13 @@
     \if@english
         \englishAbstract
         \englishKeywords\\[4mm]
+        \vspace{\extraspace}
         \portugueseAbstract
         \portugueseKeywords
       \else
         \portugueseAbstract
         \portugueseKeywords\\[4mm]
+        \vspace{\extraspace}
         \englishAbstract
         \englishKeywords
     \fi
@@ -325,14 +327,14 @@
   \stepcounter{authorscounter}
 }
 
-\newcommand{\theauthorcontributions}{
+\newcommand{\theauthorcontributions}[1]{
   \vspace{-2mm}
   \if@english
     \section*{Author contributions}
   \else
     \section*{Contribuições dos autores}
   \fi  
-  \input{authorshipAndContributions.tex}
+  \input{#1}
 }
 
 \renewcommand{\thefigure}{\arabic{figure}}
