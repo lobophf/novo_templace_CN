@@ -144,13 +144,13 @@
   \normalsize
   \mbox{
     {\hspace{-3pt}\bf#2}% 
-    {\ifthenelse{\equal{#3}{}}{}{\textsuperscript{~\bf#3}}}%
+    {\ifthenelse{\equal{#3}{}}{}{\textsuperscript{~\bf\tiny#3}}}%
     {\ifthenelse{\equal{#1}{}}{}{\hspace{1.2pt}\orcid{#1}}}%
   }%
 }
 
 \newcommand{\affil}[1]{\def\affil{\par\footnotesize\selectfont#1}}
-\newcommand{\affiliation}[2]{\textsuperscript{\footnotesize\selectfont#1}#2\par}
+\newcommand{\affiliation}[2]{\textsuperscript{\tiny\selectfont#1}#2\par}
 
 \newcommand{\makeabstract}[2]{
   \noindent\flushleft\setstretch{1.0}
