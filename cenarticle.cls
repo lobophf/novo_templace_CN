@@ -71,9 +71,9 @@
 %----------------------------------------------------------------------------------------
 %
 \if@english
-  \def\openacessfile{images/open-access.png}
+  \def\openacessfile{ciencia_e_natura_images/open-access.png}
 \else
-  \def\openacessfile{images/acesso-aberto.png}
+  \def\openacessfile{ciencia_e_natura_images/acesso-aberto.png}
 \fi
 %
 \if@portuguese
@@ -102,9 +102,9 @@
 \newcommand{\cncoverheader}{
  \noindent\begin{tikzpicture}[overlay]
     \begin{scope}[shift={(0,-10mm)}]
-      \node[anchor=south west,inner sep=0mm] at (0, 0) {\includegraphics[height=27.5mm]{images/logo-ufsm.png}};
-      \node[anchor=south,inner sep=0mm] at (\textwidth/2, 7mm) {\includegraphics[width=91.3mm]{images/logo-ciencia-e-natura.jpg}};
-      \node[anchor=south east, inner sep=0mm] at (\textwidth, 9mm) {\includegraphics[height=22.6mm]{images/revista.jpg}};
+      \node[anchor=south west,inner sep=0mm] at (0, 0) {\includegraphics[height=27.5mm]{ciencia_e_natura_images/logo-ufsm.png}};
+      \node[anchor=south,inner sep=0mm] at (\textwidth/2, 7mm) {\includegraphics[width=91.3mm]{ciencia_e_natura_images/logo-ciencia-e-natura.jpg}};
+      \node[anchor=south east, inner sep=0mm] at (\textwidth, 9mm) {\includegraphics[height=22.6mm]{ciencia_e_natura_images/revista.jpg}};
       \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 6mm) {\fontsize{8pt}{2pt}\selectfont ISSN \issn};
       \node[left, anchor=east, inner sep = 0mm] at (\textwidth, 1.5mm) {\includegraphics[height=4.5mm]{\openacessfile}};
 
@@ -199,7 +199,7 @@
       \noindent\begin{tikzpicture}[overlay]
         \begin{scope}[shift={(0,7mm)}]
           \draw[line width=1.0pt, cncolor] (0, 0) -- (\textwidth, 0);
-          \node[anchor=north west,inner sep=0mm] at (0, -1.5mm) {\includegraphics[width=17.4mm]{images/creativecommons.png}};
+          \node[anchor=north west,inner sep=0mm] at (0, -1.5mm) {\includegraphics[width=17.4mm]{ciencia_e_natura_images/creativecommons.png}};
           \node[anchor=west, inner sep=0mm] at (20mm, -4.8mm) {\scriptsize\selectfont \creativecommonstext};
         \end{scope}
       \end{tikzpicture}
