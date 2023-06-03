@@ -1,26 +1,39 @@
 #!/bin/bash
 
 authorFolder='author_files'
-authorFiles='https://uc4bc22013f2e02170fc540cb27a.dl.dropboxusercontent.com/zip_download_get/Bgk8QvqHfg6w99eXtgMeCJmsYNf1iOd0ImeP8glrC_0bNyIM0zsO70wjMwTAb4QvtOjWCBJOCwy40-wLSbgMDoIYlMxeiwjsVmHxVME3TW9LZA?_download_id=135192709297668253731150706657263684373260784521026549034371754102&_notify_domain=www.dropbox.com&dl=1'
-
 CENFolder='ciencia_e_natura_images'
-CENFiles='https://uc9ab9be8c1e8cd4d69d374244e2.dl.dropboxusercontent.com/zip_download_get/BgoKQfIIFM07Mp6FRe2SZJqwEaAcZKcRMS3dFFySpgnWauvyCXMeaQ5vfFBGi89CWE-uWmFCZ8zJu8tbfR3y4l7agbzb4pMAQJNnNtg2k-VQpw?_download_id=367960099149058364319372568591795028356855159465298846611692907312&_notify_domain=www.dropbox.com&dl=1'
 
+#FROM MY PERSONAL REPO
+CENCenterLogo='https://dl.dropboxusercontent.com/s/ryy8ak0xoeqk76u/logo-ciencia-e-natura.jpg?dl=0'
+CENCreativeCommonsLogo='https://dl.dropboxusercontent.com/s/j33jzxl1cnllnsb/creativecommons.png?dl=0'
+
+AuthorImage14Bis='https://dl.dropboxusercontent.com/s/i7zkrwncj0lxkbs/14-bis.jpeg?dl=0'
+AuthorImageGraph='https://dl.dropboxusercontent.com/s/yqr1pqap1pgo7ob/graph.png?dl=0'
+AuthorImageNimbodetector='https://dl.dropboxusercontent.com/s/aoi3tyu7qhkxjjr/nimbodetector.png?dl=0'
+AuthorImageSensor='https://dl.dropboxusercontent.com/s/o4odbk9lqghke6j/sensor.png?dl=0'
+
+#FROM CENREPO
 CENCoverPage='https://dl.dropboxusercontent.com/s/sa0nmq0xnrf6yeu/capa%202023.jpg?dl=0'
+CENOpenAccessImage='https://dl.dropboxusercontent.com/s/61nilkod018iqng/OPEN%20ACCESS.png?dl=0'
+CENOAcessoAbertoImage='https://dl.dropboxusercontent.com/s/61nilkod018iqng/OPEN%20ACCESS.png?dl=0'
+CENLeftLogo='https://dl.dropboxusercontent.com/s/yv4sqs7gjgcge2e/UFSM_brasao-monograma_v_solido.jpg?dl=0'
+
+if ! [ -d "${CENFolder}" ]; then
+  mkdir "${CENFolder}"
+  curl -o "${CENFolder}/logo-ciencia-e-natura.jpg" "${CENCenterLogo}"
+  curl -o "${CENFolder}/revista.jpg" "${CENCoverPage}"
+  curl -o "${CENFolder}/open-access.png" "${CENOpenAccessImage}"
+  curl -o "${CENFolder}/acesso-aberto.png" "${CENOAcessoAbertoImage}"
+  curl -o "${CENFolder}/logo-ufsm.png" "${CENLeftLogo}"
+  curl -o "${CENFolder}/creativecommons.png" "${CENCreativeCommonsLogo}"
+fi
 
 if  ! [ -d "${authorFolder}" ]; then
   mkdir "${authorFolder}"
-  curl -o author_files.zip "${authorFiles}"
-  unzip author_files.zip -d "${authorFolder}"
-  rm author_files.zip
-fi
-
-if ! [ -d "${CENFolder}" ]; then
-  mkdir ciencia_e_natura_images
-  curl -o journal_images.zip "${CENFiles}"
-  unzip journal_images.zip -d ciencia_e_natura_images
-  curl -o ciencia_e_natura_images/revista.jpg "${CENCoverPage}"
-  rm journal_images.zip
+  curl -o "${authorFolder}/14-bis.jpeg" "${AuthorImage14Bis}"
+  curl -o "${authorFolder}/graph.png" "${AuthorImageGraph}"
+  curl -o "${authorFolder}/nimbodetector.png" "${AuthorImageNimbodetector}"
+  curl -o "${authorFolder}/sensor.png" "${AuthorImageSensor}"
 fi
 
 if ! [ -f "foobar.f90" ]; then
