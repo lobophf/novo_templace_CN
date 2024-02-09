@@ -26,7 +26,8 @@ This repository holds essential files of the submission process to the [Ciência
 
 
 ## Quick Start Guide:
-First, clone this repository and jump into the `cnc-paper` folder.
+First, download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip), then extract everything. Or alternatly, clone this repository.<br>
+Whenever the choice you made, jump into the `cnc-paper` folder after that.
 
 ```sh
 $ git clone git@github.com:centraldeperiodicos/template_tex_ciencia_e_natura.git
