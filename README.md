@@ -25,7 +25,7 @@ This repository contains essential files for the submission process to the [Ciê
 - You must have the `unzip package` installed.
 
 ## Quick Start Guide:
-For first-time users, it's necessary to make the script.sh file executable. This script compiles the LaTeX files and generates the PDF output.
+For first-time users, it's necessary to make the `script.sh` file executable. This script compiles the LaTeX files and generates the PDF output.
 
 To do that, first download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip), then extract everything. Alternatively, clone this repository. Whichever option you choose, navigate to `the cnc-paper` folder afterwards.
 
@@ -33,7 +33,7 @@ To do that, first download the files by clicking [here](https://github.com/centr
 $ git clone git@github.com:centraldeperiodicos/template_tex_ciencia_e_natura.git
 $ cd cnc-paper
 ```
-For first-time use of the files in this project, making the `cript.sh` executable is necessary.
+For first-time use of the files in this project, making the `script.sh` executable is necessary.
 ```sh
 $ chmod +x script.sh
 ```
