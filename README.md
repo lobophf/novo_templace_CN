@@ -2,7 +2,7 @@
     <img alt="Ciência e Natura Logo" src="https://periodicos.ufsm.br/public/journals/31/pageHeaderLogoImage_en_US.png" width="70%">
     <br>
     <img alt="Issues" src="https://img.shields.io/github/issues/lobophf/conway-game-of-life.svg">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lobophf/conway-game-of-life">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/centraldeperiodicos/template_tex_ciencia_e_natura">
     <img alt="License" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0%20Deed-brightgreen"><br>
     <a href="README.md">:us: English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="README-pt-br.md">:brazil: Português</a>&nbsp;&nbsp;&nbsp;
@@ -29,7 +29,7 @@ This repository holds essential files of the submission process to the [Ciência
 First, clone this repository and jump into the `cnc-paper` folder.
 
 ```sh
-$ git clone git@github.com:lobophf/conway-game-of-life.git 
+$ git clone git@github.com:centraldeperiodicos/template_tex_ciencia_e_natura.git
 $ cd cnc-paper
 ```
 For first timming using the files on this project, turning the `script.sh` executable is need.
