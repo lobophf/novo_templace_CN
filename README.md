@@ -9,7 +9,7 @@
     <br> 
     <a href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#quick-start-guide">Quick Start Guide</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#submission">Submission</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#license">License</a>	
 </p>
