@@ -26,8 +26,10 @@ This repository holds essential files of the submission process to the [Ciência
 
 
 ## Quick Start Guide:
-First, download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip), then extract everything. Or alternatly, clone this repository.<br>
-Whenever the choice you made, jump into the `cnc-paper` folder after that.
+For first-time users, it's necessary to turn the `script.sh` file executable. This script compiles the LaTeX files and generates the PDF output.
+
+In order to do that, first download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip), then extract everything. Or alternatly, clone this repository.<br>
+Whenever the choice going to make, jump into the `cnc-paper` folder after that.
 
 ```sh
 $ git clone git@github.com:centraldeperiodicos/template_tex_ciencia_e_natura.git
@@ -41,7 +43,7 @@ Once you've done it, compile the pdf.
 ```sh
 $ ./script.sh
 ```
-If everything went well, the `paper.pdf` file appeared in the root directory.
+If everything went well, the `paper.pdf` file appeared in the root directory.<br>
 
 > [!NOTE]
 >This script downloads a zipped file from a third-party platform, containing images essential to the journal, as well as others that are part of the paper for demonstration purposes. Feel free to change whatever is needed to create your own version. The `paper.tex` file provides additional instructions for this.
