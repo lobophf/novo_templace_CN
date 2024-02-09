@@ -12,8 +12,8 @@
     <a href="#quick-start-guide">Quick Start Guide</a>&nbsp;&nbsp;|&nbsp;
     <a href="#submission">Submission</a>&nbsp;&nbsp;|&nbsp;
     <a href="#license">License</a>	
-<h2 align="center">Ciência e Natura - LaTeX Repository</h2>
-<h4 align="center">Federal University of Santa Maria, Main Campus Central Publisher of UFSM Journals</h4>
+    <h2 align="center">Ciência e Natura - LaTeX Repository</h2>
+    <h4 align="center">Federal University of Santa Maria, Main Campus Central Publisher of UFSM Journals</h4>
 </p>
 
 ## About:
@@ -25,9 +25,9 @@ This repository contains essential files for the submission process to the [Ciê
 - You must have the `unzip package` installed.
 
 ## Quick Start Guide:
-For first-time users, it's necessary to make the `script.sh` file executable. This script compiles the LaTeX files and generates the PDF output.
+To generate a PDF with a demonstration paper, it is necessary to follow some steps to be performed by the `script.sh` file. To do this, you need to obtain the files from this project and execute the script so that it downloads some images and compiles a PDF file.
 
-To do that, first download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip), then extract everything. Alternatively, clone this repository. Whichever option you choose, navigate to the `cnc-paper` folder afterwards.
+Therefore, first download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip) and then extract everything. Alternatively, clone this repository. Regardless of the chosen option, navigate to the `cnc-paper` folder afterwards.
 
 ```sh
 $ git clone git@github.com:centraldeperiodicos/template_tex_ciencia_e_natura.git
