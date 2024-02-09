@@ -25,7 +25,7 @@ This repository contains essential files for the submission process to the [Ciê
 - You must have the `unzip package` installed.
 
 ## Quick Start Guide:
-To generate a PDF with a demonstration paper, it is necessary to follow some steps to be performed by the `script.sh` file. To do this, you need to obtain the files from this project and execute the script so that it downloads some images and compiles a PDF file.
+To create a PDF with a sample paper, it is necessary to follow a sequence of steps. For this, you will need to download the files present in this repository and change the access permission of the `script.sh` file. Upon executing it, the script will obtain some images and compile a PDF file.
 
 Therefore, first download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip) and then extract everything. Alternatively, clone this repository. Regardless of the chosen option, navigate to the `cnc-paper` folder afterwards.
 
