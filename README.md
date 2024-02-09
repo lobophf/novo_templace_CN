@@ -12,7 +12,7 @@
     <a href="#quick-start-guide">Quick Start Guide</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#submission">Submission</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="#balance_scale-license">License</a>	
+    <a href="#license">License</a>	
 </p>
 <h1 align="center">Ciência e Natura Repository</h1>
 <h4 align="center">Federal University of Santa Maria, Main Campus Central Publisher of UFSM Journals</h4>
@@ -49,4 +49,6 @@ If everything went well, the `paper.pdf` file appeared in the root directory.
 ## Submission:
 Before proceed by submitting, review our [Submission Preparation Checklist](https://periodicos.ufsm.br/cienciaenatura/about/submissions) and provide all necessary files on our platform, including the generated pdf.
 
+## License
+This application is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/ License), as found in the [LICENSE](./LICENSE) file.
 
