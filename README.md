@@ -11,7 +11,7 @@
     <a href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#quick-start-guide">Quick Start Guide</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="#star-acknowledgments">Acknowledgments</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#submission">Submission</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#balance_scale-license">License</a>	
 </p>
 <h1 align="center">Ciência e Natura Repository</h1>
@@ -44,7 +44,9 @@ $ ./script.sh
 If everything went well, the `paper.pdf` file appeared in the root directory.
 
 > [!NOTE]
->This script downloads a zipped file, containing images essential to the journal, as well as others that are part of the paper for demonstration purposes. Feel free to change whatever is needed to create your own version. The `paper.tex` file provides additional instructions for this.
->After that, please review the submission [policies](https://periodicos.ufsm.br/cienciaenatura/about/submissions) and proceed by submitting all necessary files, including the generated pdf.
+>This script downloads a zipped file from a third-party platform, containing images essential to the journal, as well as others that are part of the paper for demonstration purposes. Feel free to change whatever is needed to create your own version. The `paper.tex` file provides additional instructions for this.
+
+## Submission:
+Before proceed by submitting, review our [Submission Preparation Checklist](https://periodicos.ufsm.br/cienciaenatura/about/submissions) and provide all necessary files on our platform, including the generated pdf.
 
 
