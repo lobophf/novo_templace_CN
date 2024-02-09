@@ -3,8 +3,7 @@
     <br>
     <img alt="Issues" src="https://img.shields.io/github/issues/lobophf/conway-game-of-life.svg">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/lobophf/conway-game-of-life">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen"> 
-    <br>
+    <img alt="License" src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0%20Deed-brightgreen"><br>
     <a href="README.md">:us: English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="README-pt-br.md">:brazil: Português</a>&nbsp;&nbsp;&nbsp;
     <br> 
@@ -50,5 +49,5 @@ If everything went well, the `paper.pdf` file appeared in the root directory.
 Before proceed by submitting, review our [Submission Preparation Checklist](https://periodicos.ufsm.br/cienciaenatura/about/submissions) and provide all necessary files on our platform, including the generated pdf.
 
 ## License:
-This application is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-nc-sa/4.0/) License, as found in the [LICENSE](./LICENSE) file.
+This application is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/), as found in the [LICENSE](./LICENSE) file.
 
