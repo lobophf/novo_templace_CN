@@ -50,4 +50,4 @@ Se tudo correu bem, o arquivo `paper.pdf` aparecerá no diretório raiz.<br>
 Antes de prosseguir com a submissão, revise nossa [Lista de Verificação de Preparação para Submissão]((https://periodicos.ufsm.br/cienciaenatura/about/submissions) ) e forneça todos os arquivos necessários em nossa plataforma, incluindo o PDF gerado.
 
 ## License:
-Este projeto está licenciado sob a [Licença Internacional Creative Commons Attribution-NonCommercial-ShareAlike 4.0]((https://creativecommons.org/licenses/by-nc-sa/4.0/)), conforme encontrado no arquivo [LICENSE](./LICENSE).
+Este projeto está licenciado sob a [Licença Internacional Creative Commons Attribution-NonCommercial-ShareAlike 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/), conforme encontrado no arquivo [LICENSE](./LICENSE).
