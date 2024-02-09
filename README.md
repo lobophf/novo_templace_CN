@@ -1,5 +1,5 @@
 <p align="center">
-    <img alt="Ciência e Natura Logo" src="https://periodicos.ufsm.br/public/journals/31/pageHeaderLogoImage_en_US.png" width="70%">
+   <img alt="CienciaENaturaLogo" src="https://dl.dropboxusercontent.com/s/2y3obtp1dcg0h0ub3mab6/logo-ciencia-e-natura.jpg?rlkey=77vnaywv3t5oydoiqclnfu736&dl=0" width="70%">
     <br>
     <img alt="Issues" src="https://img.shields.io/github/issues/lobophf/conway-game-of-life.svg">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/centraldeperiodicos/template_tex_ciencia_e_natura">
