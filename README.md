@@ -9,8 +9,8 @@
     <a href="README-pt-br.md">:brazil: Português</a>&nbsp;&nbsp;&nbsp;
     <br> 
     <a href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="#gear-using">Using</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="#octocat-contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#quick-start-guide">Quick Start Guide</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="requirements">Requirements</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#star-acknowledgments">Acknowledgments</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#balance_scale-license">License</a>	
 </p>
@@ -19,4 +19,26 @@
 
 
 ## About:
-This repository holds essential files of the submission process to the Ciência e Natura journal. The complete guidelines to publish are available [here](https://periodicos.ufsm.br/cienciaenatura/about/submissions).
+This repository holds essential files of the submission process to the [Ciência e Natura journal](https://periodicos.ufsm.br/cienciaenatura/). The complete guidelines to publish are available [here](https://periodicos.ufsm.br/cienciaenatura/about/submissions).
+
+## Requirements:
+- This project is designed to work only on Linux-like machines.
+- Ensure you have pdfTeX installed.
+
+
+## Quick Start Guide:
+First, clone this repository and jump into the `cnc-paper` folder.
+
+```sh
+$ git clone git@github.com:lobophf/conway-game-of-life.git 
+$ cd cnc-paper
+```
+For first timming using the files on this project, turning the `script.sh` executable is need.
+```sh
+$ chmod +x script.sh
+```
+Once you've done it, compile the pdf.
+```sh
+$ ./script.sh
+```
+
