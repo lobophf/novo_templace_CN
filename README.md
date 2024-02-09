@@ -8,7 +8,7 @@
     <a href="README.md">:us: English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="README-pt-br.md">:brazil: Português</a>&nbsp;&nbsp;&nbsp;
     <br> 
-    <a href="#computer-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a href="#about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#gear-using">Using</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#octocat-contributing">Contributing</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#star-acknowledgments">Acknowledgments</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -16,3 +16,7 @@
 </p>
 <h1 align="center">Ciência e Natura Repository</h1>
 <h4 align="center">Federal University of Santa Maria, Main Campus Central Publisher of UFSM Journals</h4>
+
+
+## About:
+This repository holds essential files of the submission process to the Ciência e Natura journal. The complete guidelines to publish are available [here](https://periodicos.ufsm.br/cienciaenatura/about/submissions).
