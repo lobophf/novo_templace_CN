@@ -27,7 +27,7 @@ This repository contains essential files for the submission process to the [Ciê
 ## Quick Start Guide:
 For first-time users, it's necessary to make the `script.sh` file executable. This script compiles the LaTeX files and generates the PDF output.
 
-To do that, first download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip), then extract everything. Alternatively, clone this repository. Whichever option you choose, navigate to `the cnc-paper` folder afterwards.
+To do that, first download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip), then extract everything. Alternatively, clone this repository. Whichever option you choose, navigate to the `cnc-paper` folder afterwards.
 
 ```sh
 $ git clone git@github.com:centraldeperiodicos/template_tex_ciencia_e_natura.git
