@@ -27,7 +27,7 @@ Este repositório contém arquivos essenciais para o processo de submissão ao [
 ## Guia de Início Rápido:
 Para gerar um PDF com um artigo de demonstração, é necessário seguir algums passos a serem realizados pelo arquivo `script.sh`. Para realizar isso é necessário obter os arquivos desse projeto e executar o script para que este faça o download de algumas imagens e compile um arquivo PDF.
 
-Semdo assim, primeiro baixe os arquivos clicando aqui e, em seguida, extraia tudo. Alternativamente, clone este repositório. Independentemente da opção escolhida, navegue até a pasta cnc-paper depois.
+Sendo assim, primeiro baixe os arquivos clicando aqui e, em seguida, extraia tudo. Alternativamente, clone este repositório. Independentemente da opção escolhida, navegue até a pasta cnc-paper depois.
 
 ```sh
 $ git clone git@github.com:centraldeperiodicos/template_tex_ciencia_e_natura.git
