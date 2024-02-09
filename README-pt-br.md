@@ -21,8 +21,8 @@ Este repositório contém arquivos essenciais para o processo de submissão ao [
 
 ## Requerementos:
 - Este projeto foi projetado para funcionar apenas em máquinas com distros Linux.
-- Certifique-se de ter o pdfTeX instalado.
-- Você deve ter o pacote unzip instalado.
+- Certifique-se de ter o `pdfTeX` instalado.
+- Você deve ter o `unzip package` instalado.
 
 ## Guia de Início Rápido:
 Para gerar um PDF com um artigo de demonstração, é necessário seguir algums passos a serem realizados pelo arquivo `script.sh`. Para realizar isso é necessário obter os arquivos desse projeto e executar o script para que este faça o download de algumas imagens e compile um arquivo PDF.
