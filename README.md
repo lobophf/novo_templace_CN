@@ -23,7 +23,7 @@ This repository contains essential files for the submission process to the [Ciê
 - This project is designed to work only on Linux-like machines.
 - Ensure you have pdfTeX installed.
 - You must have the `unzip package` installed.
-- 
+
 ## Quick Start Guide:
 For first-time users, it's necessary to make the script.sh file executable. This script compiles the LaTeX files and generates the PDF output.
 
