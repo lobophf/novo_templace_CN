@@ -13,7 +13,7 @@
     <a href="#submission">Submission</a>&nbsp;&nbsp;|&nbsp;
     <a href="#license">License</a>	
     <h2 align="center">Ciência e Natura - LaTeX Repository</h2>
-    <h4 align="center">Federal University of Santa Maria, Main Campus Central Publisher of UFSM Journals</h4>
+    <h4 align="center">Federal University of Santa Maria - Main Campus, Central Periodicals Publisher of UFSM</h4>
 </p>
 
 ## About:
