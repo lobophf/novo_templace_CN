@@ -8,12 +8,12 @@
     <a href="README-pt-br.md">:brazil: Português</a>&nbsp;&nbsp;&nbsp;
     <br> 
     <a href="#about">About</a>&nbsp;&nbsp;|&nbsp;
-    <a href="#quick-start-guide">Quick Start Guide</a>&nbsp;&nbsp;|&nbsp;
     <a href="#requirements">Requirements</a>&nbsp;&nbsp;|&nbsp;
+    <a href="#quick-start-guide">Quick Start Guide</a>&nbsp;&nbsp;|&nbsp;
     <a href="#submission">Submission</a>&nbsp;&nbsp;|&nbsp;
     <a href="#license">License</a>	
 </p>
-<h1 align="center">Ciência e Natura Repository</h1>
+<h1 align="center">Ciência e Natura - LaTeX Repository</h1>
 <h4 align="center">Federal University of Santa Maria, Main Campus Central Publisher of UFSM Journals</h4>
 
 ## About:
