@@ -21,7 +21,7 @@ This repository contains essential files for the submission process to the [Ciê
 
 ## Requirements:
 - This project is designed to work only on Linux-like machines.
-- Ensure you have pdfTeX installed.
+- Ensure you have `pdfTeX` installed.
 - You must have the `unzip package` installed.
 
 ## Quick Start Guide:
