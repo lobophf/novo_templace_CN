@@ -41,4 +41,10 @@ Once you've done it, compile the pdf.
 ```sh
 $ ./script.sh
 ```
+If everything went well, the `paper.pdf` file appeared in the root directory.
+
+> [!NOTE]
+>This script downloads a zipped file, containing images essential to the journal, as well as others that are part of the paper for demonstration purposes. Feel free to change whatever is needed to create your own version. The `paper.tex` file provides additional instructions for this.
+>After that, please review the submission [policies](https://periodicos.ufsm.br/cienciaenatura/about/submissions) and proceed by submitting all necessary files, including the generated pdf.
+
 
