@@ -12,9 +12,9 @@
     <a href="#quick-start-guide">Quick Start Guide</a>&nbsp;&nbsp;|&nbsp;
     <a href="#submission">Submission</a>&nbsp;&nbsp;|&nbsp;
     <a href="#license">License</a>	
-</p>
-<h1 align="center">Ciência e Natura - LaTeX Repository</h1>
+<h2 align="center">Ciência e Natura - LaTeX Repository</h2>
 <h4 align="center">Federal University of Santa Maria, Main Campus Central Publisher of UFSM Journals</h4>
+</p>
 
 ## About:
 This repository contains essential files for the submission process to the [Ciência e Natura journal](https://periodicos.ufsm.br/cienciaenatura/). Complete guidelines for publication are available [here](https://periodicos.ufsm.br/cienciaenatura/about/submissions).
