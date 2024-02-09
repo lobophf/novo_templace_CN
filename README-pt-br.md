@@ -25,7 +25,7 @@ Este repositório contém arquivos essenciais para o processo de submissão ao [
 - Você deve ter o `unzip package` instalado.
 
 ## Guia de Início Rápido:
-Para gerar um PDF com um manuscrito de demonstração, é necessário seguir uma sequência de passos. Para isso, será preciso baixar os arquivos presentes neste repositório e alterar a permissão de acesso do arquivo `script.sh`. Ao executá-lo, o script obterá algumas imagens e compilará um arquivo PDF.
+Para gerar um PDF com um paper de demonstração, é necessário seguir uma sequência de passos. Para isso, será preciso baixar os arquivos presentes neste repositório e alterar a permissão de acesso do arquivo `script.sh`. Ao executá-lo, o script obterá algumas imagens e compilará um arquivo PDF.
 
 Sendo assim, primeiro baixe os arquivos clicando [aqui](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip) e, em seguida, extraia tudo. Alternativamente, clone este repositório. Independentemente da opção escolhida, navegue até a pasta `cnc-paper` depois.
 
