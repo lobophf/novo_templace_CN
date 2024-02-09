@@ -13,7 +13,7 @@
     <a href="#submissão">Submissão</a>&nbsp;&nbsp;|&nbsp;
     <a href="#licença">Licença</a>
     <h2 align="center">Ciência e Natura - Repositorio LaTeX</h2>
-    <h4 align="center">Universidade Federal de Santa Maria, Campus Sede, Editora Central de Periódicos da UFSM</h4>
+    <h4 align="center">Universidade Federal de Santa Maria - Campus Sede, Editora Central de Periódicos da UFSM</h4>
 </p>
 
 ## Sobre:
