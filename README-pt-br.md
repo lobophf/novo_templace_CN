@@ -7,27 +7,30 @@
     <a href="README.md">:us: English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="README-pt-br.md">:brazil: Português</a>&nbsp;&nbsp;&nbsp;
     <br> 
-    <a href="#about">About</a>&nbsp;&nbsp;|&nbsp;
+    <a href="#sobre">Sobre</a>&nbsp;&nbsp;|&nbsp;
+    <a href="#requirementos">Requerimentos</a>&nbsp;&nbsp;|&nbsp;
     <a href="#quick-start-guide">Quick Start Guide</a>&nbsp;&nbsp;|&nbsp;
-    <a href="#requirements">Requirements</a>&nbsp;&nbsp;|&nbsp;
     <a href="#submission">Submission</a>&nbsp;&nbsp;|&nbsp;
     <a href="#license">License</a>	
 </p>
-<h1 align="center">Ciência e Natura Repository</h1>
-<h4 align="center">Federal University of Santa Maria, Main Campus Central Publisher of UFSM Journals</h4>
+<h1 align="center">Ciência e Natura Repositório LaTeX</h1>
+<h4 align="center">Universidade Federal de Santa Maria, Campus Sede, Editora Central de Periódicos da UFSM</h4>
 
-## About:
-This repository contains essential files for the submission process to the [Ciência e Natura journal](https://periodicos.ufsm.br/cienciaenatura/). Complete guidelines for publication are available [here](https://periodicos.ufsm.br/cienciaenatura/about/submissions).
+## Sobre:
+Este repositório contém arquivos essenciais para o processo de submissão ao [periódico Ciência e Natura](https://periodicos.ufsm.br/cienciaenatura/). Diretrizes completas para publicação estão disponíveis [aqui](https://periodicos.ufsm.br/cienciaenatura/about/submissions).
 
-## Requirements:
-- This project is designed to work only on Linux-like machines.
-- Ensure you have pdfTeX installed.
-- You must have the `unzip package` installed.
+## Requerimentos:
+- Este projeto foi projetado para funcionar apenas em máquinas com distros Linux.
+- Certifique-se de ter o pdfTeX instalado.
+- Você deve ter o pacote unzip instalado.
 
 ## Quick Start Guide:
+Para aqueles que estão tendo primeiro contato, é necessário tornar o arquivo `script.sh` executável. Este script compila os arquivos LaTeX e gera a saída em PDF.
+
+Para fazer isso, primeiro baixe os arquivos clicando [aqui](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip) e, em seguida, extraia tudo. Alternativamente, clone este repositório. Independentemente da opção escolhida, navegue até a pasta `cnc-paper` depois.
+
 For first-time users, it's necessary to make the `script.sh` file executable. This script compiles the LaTeX files and generates the PDF output.
 
-To do that, first download the files by clicking [here](https://github.com/centraldeperiodicos/template_tex_ciencia_e_natura/archive/refs/heads/main.zip), then extract everything. Alternatively, clone this repository. Whichever option you choose, navigate to the `cnc-paper` folder afterwards.
 
 ```sh
 $ git clone git@github.com:centraldeperiodicos/template_tex_ciencia_e_natura.git
